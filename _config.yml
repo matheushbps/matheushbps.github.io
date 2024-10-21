@@ -7,12 +7,12 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-title                    : "Your Name / Site Title"
+locale                   : "pt-BR"
+title                    : "Matheus Henrique"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://matheushbps.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "matheus_png.png"
   name             : "Matheus Henrique"
-  pronouns         : "He-Him" 
-  bio              : "Short biography for the left-hand sidebar"
+  pronouns         : "" 
+  bio              : "Data Scientist/Data Analyst"
   location         : "Earth"
-  employer         : "Red Brick University"
+  employer         : "Turing-Consultant at a FAANG company"
   uri              : "https://www.linkedin.com/in/matheushbps/"
   email            : "matheushbps@gmail.com" 
 
