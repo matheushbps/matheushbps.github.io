@@ -9,13 +9,52 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+<<<<<<< HEAD
+=======
+    <style>
+      /* Ensure the footer is positioned correctly */
+      .page__footer {
+        position: relative;
+        width: 100%;
+        clear: both;
+      }
+
+      /* Sticky footer */
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .wrapper {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .page__footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+    </style>
+>>>>>>> bb0b3921e1347ca81cbfdfd0d91d1eb18ae089d8
   </head>
 
   <body>
+    <div class="wrapper">
+      {% include browser-upgrade.html %}
+      {% include masthead.html %}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+      <div class="content">
+        {{ content }}
+      </div>
 
+<<<<<<< HEAD
     {{ content }}
 
     <div class="page__footer">
@@ -23,9 +62,16 @@ layout: compress
         {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
+=======
+      <div class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include footer.html %}
+        </footer>
+      </div>
+>>>>>>> bb0b3921e1347ca81cbfdfd0d91d1eb18ae089d8
     </div>
 
     {% include scripts.html %}
-
   </body>
 </html>
