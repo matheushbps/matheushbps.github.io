@@ -12,42 +12,53 @@ layout: compress
     <style>
       /* Ensure the footer is positioned correctly */
       .page__footer {
-        position: relative; /* or fixed if you want it to stay at the bottom */
+        position: relative;
         width: 100%;
-        clear: both; /* Clear any floating elements */
-        bottom: 0;
+        clear: both;
       }
 
-      /* If using fixed position */
-      .fixed-footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 1000; /* Ensure it stays above other elements */
+      /* Sticky footer */
+      html, body {
+        height: 100%;
+        margin: 0;
       }
 
-      /* Ensure no parent elements are cutting off the footer */
-      body, html {
-        overflow-x: hidden; /* Prevent horizontal overflow */
+      .wrapper {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .page__footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
       }
     </style>
   </head>
 
   <body>
+    <div class="wrapper">
+      {% include browser-upgrade.html %}
+      {% include masthead.html %}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+      <div class="content">
+        {{ content }}
+      </div>
 
-    {{ content }}
-
-    <div class="page__footer fixed-footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+      <div class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include footer.html %}
+        </footer>
+      </div>
     </div>
 
     {% include scripts.html %}
-
   </body>
 </html>
