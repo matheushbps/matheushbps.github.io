@@ -15,10 +15,10 @@ classes: wide
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main" style="width: 100%; padding: 0; margin: 0;">
-  <!-- {% include sidebar.html %} -->
+<div id="main" role="main" style="display: flex; width: 100%; padding: 0; margin: 0;">
+  {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork" style="width: 100%; padding: 0; margin: 0;">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork" style="flex: 1; padding: 0; margin: 0;">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
