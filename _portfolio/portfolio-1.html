@@ -3091,7 +3091,7 @@ vertical-align: -.125em;
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
@@ -3106,7 +3106,7 @@ vertical-align: -.125em;
   </ul>
 </nav>
 </div>
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -3115,7 +3115,7 @@ vertical-align: -.125em;
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -3134,7 +3134,7 @@ vertical-align: -.125em;
 <section id="install-necessary-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="install-necessary-libraries">Install Necessary Libraries</h2>
 <p>Before you start, ensure you have the necessary libraries installed. You can install them using the following commands:</p>
-<div id="7784fd6e" class="cell" data-execution_count="1">
+<div id="5c096dd4" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary libraries from the transformers package</span></span>
@@ -3144,7 +3144,7 @@ vertical-align: -.125em;
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>logging.set_verbosity(logging.WARNING)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="28f1e2c3" class="cell" data-execution_count="2">
+<div id="1a2fae12" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the car reviews dataset</span></span>
@@ -3159,7 +3159,7 @@ vertical-align: -.125em;
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the DataFrame</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <div>
 
 
@@ -3207,7 +3207,7 @@ vertical-align: -.125em;
 <section id="sentiment-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="sentiment-analysis">Sentiment Analysis</h2>
 <p>We will use a pre-trained model to classify the sentiment of car reviews.</p>
-<div id="15476dd9" class="cell" data-execution_count="3">
+<div id="e3a675e9" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Running the sentiment classification</span></span>
@@ -3270,7 +3270,7 @@ F1 result: 0.8571428571428571</code></pre>
 <section id="text-translation" class="level2">
 <h2 class="anchored" data-anchor-id="text-translation">Text Translation</h2>
 <p>We will use a pre-trained model to translate car reviews from Spanish to English.</p>
-<div id="7aade97e" class="cell" data-execution_count="4">
+<div id="c5317223" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load model directly</span></span>
@@ -3318,7 +3318,7 @@ Bleu Score: 0.6712403123245675
 <section id="question-answering" class="level2">
 <h2 class="anchored" data-anchor-id="question-answering">Question Answering</h2>
 <p>We will use a pre-trained model to answer questions about car reviews.</p>
-<div id="75ead657" class="cell" data-execution_count="5">
+<div id="f5b573e2" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loading the model for QA</span></span>
@@ -3360,7 +3360,7 @@ Bleu Score: 0.6712403123245675
 <section id="text-summarization" class="level2">
 <h2 class="anchored" data-anchor-id="text-summarization">Text Summarization</h2>
 <p>We will use the <code>Falconsai/text_summarization</code> model to summarize the last review in our dataset.</p>
-<div id="03a5fe03" class="cell" data-execution_count="6">
+<div id="88184d8a" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the pre-trained tokenizer and model for text summarization</span></span>
@@ -3382,7 +3382,7 @@ Bleu Score: 0.6712403123245675
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the summarized text</span></span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>summarized_text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>&#39;. The Nissan Rogue provides me with the desired SUV experience without burdening me with an exorbitant payment. The financial arrangement is quite reasonable; the financial arrangement is quite reasonable. Handling and styling are great; I&#39;</code></pre>
 </div>
 </div>

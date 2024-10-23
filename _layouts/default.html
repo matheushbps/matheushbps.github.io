@@ -9,6 +9,23 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .content-wrapper {
+        flex: 1;
+      }
+      .page__footer {
+        background-color: #f8f9fa; /* Optional: Add background color */
+        padding: 10px 0; /* Optional: Add padding */
+        text-align: center; /* Optional: Center align text */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+      }
+    </style>
   </head>
 
   <body>
@@ -16,14 +33,18 @@ layout: compress
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    {{ content }}
+    <div class="content-wrapper">
+      {{ content }}
+    </div>
 
+    {% unless page.hide_footer %}
     <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
     </div>
+    {% endunless %}
 
     {% include scripts.html %}
 
