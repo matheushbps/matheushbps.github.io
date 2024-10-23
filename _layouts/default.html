@@ -9,28 +9,6 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <style>
-      /* Ensure the footer is positioned correctly */
-      .page__footer {
-        position: relative; /* or fixed if you want it to stay at the bottom */
-        width: 100%;
-        clear: both; /* Clear any floating elements */
-        bottom: 0;
-      }
-
-      /* If using fixed position */
-      .fixed-footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 1000; /* Ensure it stays above other elements */
-      }
-
-      /* Ensure no parent elements are cutting off the footer */
-      body, html {
-        overflow-x: hidden; /* Prevent horizontal overflow */
-      }
-    </style>
   </head>
 
   <body>
@@ -40,7 +18,7 @@ layout: compress
 
     {{ content }}
 
-    <div class="page__footer fixed-footer">
+    <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
