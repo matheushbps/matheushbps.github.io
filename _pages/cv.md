@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,6 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+{% include toc %}
 
 # Matheus Henrique Batista Palmieri Da Silva
 
@@ -130,4 +130,4 @@ June 2020 – August 2020
 - **Programming:** Python, R, SQL, Excel VBA  
 - **Data Tools:** Power BI, Tableau, Hadoop, Hive, PySpark  
 - **Machine Learning:** Supervised & Unsupervised Learning, NLP, PyTorch, Hugging Face  
-- **Technologies:** OpenAI API, Transformer Models, Embeddings, Tokenizers, LangChain  
+- **Technologies:** OpenAI API, Transformer Models, Embeddings, Tokenizers, LangChain
