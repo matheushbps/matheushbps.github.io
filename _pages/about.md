@@ -7,62 +7,12 @@ redirect_from:
   - /about.html
 ---
 
- Hello, I'm Matheus Henrique!
+### Welcome to My Website
 
-I hold a degree in **Chemical Engineering** from the Universidade Federal do Triângulo Mineiro (UFTM) and am currently pursuing an **MBA in Data Science and Analytics** at USP/ESALQ.
+Hello everyone, I'm Matheus Henrique, a Data Scientist with a strong foundation in data and a passion for leveraging it to solve complex problems. I hold a Bachelor’s degree in Chemical Engineering from UFTM and am currently pursuing my MSc in Data Science and Analytics at USP-ESALQ.
 
----
+Professionally, I’m a Python Data Scientist at Turing, where I collaborate on LLM engineering for one of the top FAANG companies, focusing on Conversational AI systems, Retrieval-Augmented Generation (RAG), Natural Language Processing (NLP), Supervised Fine-Tuning (SFT), and Reinforcement Learning from Human Feedback (RLHF). Over the past few years, I’ve developed expertise in Data Analysis, Business Intelligence, and Machine Learning, with experience working for companies like DiDi Chuxing (99). My work centers on building and optimizing machine learning models, developing data-driven solutions, and providing actionable insights to stakeholders.
 
-### Professional Journey
+I’m passionate about using technology to drive innovation, and I’m always eager to learn more and contribute to impactful projects. Thank you for visiting, and I hope to share my journey and insights with you.
 
-**DiDi Chuxing (99 in Brazil):**  
-- **2021:** Began as an FP&A Intern.  
-- Progressed to Data Analyst, refining my skills over three years.  
-- Final Position: Senior Data Analyst, integrating technical expertise with business insights.
-
-**Turing:**  
-- **Current Role:** Python Data Scientist.  
-- **Project:** Advancing a Large Language Model (LLM) for a leading global tech company.  
-- **Focus:** Innovating in AI and NLP technologies.
-
----
-
-### Languages and Tools
-
-- Docker
-- Apache Hive
-- MySQL
-- Pandas
-- PostgreSQL
-- Python
-- PyTorch
-- Scikit-learn
-- Seaborn
-
-### Expertise & Skills
-
-- **Data Science & Analytics:**  
-  - Python (Pandas, Sklearn, Numpy, Matplotlib, Seaborn)
-  - Machine Learning & Deep Learning
-  - SQL
-  - Excel & VBA
-  - Business Intelligence (Power BI, Tableau)
-  - Statistics
-
----
-
-### Expanding Horizons
-
-Building on my data science foundation, I am delving into **Artificial Intelligence** with a focus on:
-
-- **AI & Natural Language Processing:**  
-  - Transformers & Large Language Models (LLMs)  
-  - OpenAI API & Hugging Face  
-  - Prompt Engineering  
-  - LangChain for advanced applications
-
-I am dedicated to enhancing my technical skills, exploring innovative algorithms, and undertaking projects that challenge and expand my expertise.
-
----
-
-Explore my projects to see how I tackle real-world business challenges through data and AI!
+Feel free to explore the site and connect with me via [LinkedIn](https://www.linkedin.com/in/matheushbps/) or email me at [matheushbps@gmail.com](mailto:matheushbps@gmail.com).
