@@ -18,7 +18,7 @@ redirect_from:
 
 ---
 
-## Education
+# Education
 
 ### UFTM – Universidade Federal do Triângulo Mineiro  
 **Bachelor's Degree in Chemical Engineering**  
@@ -32,7 +32,7 @@ May 2024 – Present
 
 ---
 
-## Certifications
+# Certifications
 
 ### Data Science Academy (DSA)  
 **Program of Courses in Data Science**  
@@ -56,7 +56,7 @@ April 2024 – August 2024
 
 ---
 
-## Professional Experience
+# Professional Experience
 
 ### Turing  
 **Python Data Scientist**  
@@ -103,7 +103,7 @@ April 2022 – September 2022
 
 ---
 
-## Relevant Experience
+# Relevant Experience
 
 ### Volunteer at Medicine Distribution NGO  
 **Management Team**  
@@ -115,7 +115,7 @@ June 2020 – August 2020
 
 ---
 
-## Awards and Honors
+# Awards and Honors
 
 - Performance A/S recognition for improving business operations, 2022.
 - DiDi Chuxing global team recognition for individual contributions, 2022.
@@ -124,7 +124,7 @@ June 2020 – August 2020
 
 ---
 
-## Skills
+# Skills
 
 - **Languages:** Portuguese (Native), English (Advanced)  
 - **Programming:** Python, R, SQL, Excel VBA  
