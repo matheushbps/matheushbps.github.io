@@ -170,8 +170,7 @@ Program of Courses in Machine Learning
 Program of Courses in Data Science and Data Analytics  
 **April 2024 – August 2024**
 
-## **Data Camp – Data Scientist Associate** 
-[Certification available here](https://matheushbps.github.io/files/DSA_Associate.pdf) 
+## **Data Camp – Data Scientist Associate** [Certification available here](https://matheushbps.github.io/files/DSA_Associate.pdf)  
 *New York – USA*  
 Program of Courses in Data Science  
 **April 2024 – October 2024**
