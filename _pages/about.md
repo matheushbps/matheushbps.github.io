@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-### Welcome to My Website <img src="images/google_mat.png" alt="Google Mat" width="300" height="200">
+### Welcome to My Website <img src="images/google_mat.png" alt="Google Mat" width="200" height="150" style="float: right; margin-left: 20px;">
 
 Hello, I’m Matheus Henrique Batista Palmieri, a Data Scientist with extensive experience in data analysis, machine learning, and applied AI. Over three years at DiDi, the global leader in mobility services, I honed my skills in data-driven decision-making, developing predictive models and consolidating key performance metrics across multiple markets. Currently, I work with Turing on high-impact projects for a leading FAANG company, focusing on enhancing Conversational AI through advanced techniques like Retrieval-Augmented Generation (RAG) and Supervised Fine Tuning (SFT) to boost response quality and model accuracy.
 
