@@ -14,3 +14,5 @@ Hello, I’m Matheus Henrique Batista Palmieri, a Data Scientist with extensive 
 With expertise in SQL, Python, and machine learning, I bring a focused approach to data science that emphasizes practical insights and results. I am also skilled in data visualization tools like Power BI and Tableau, making complex analyses clear and actionable for stakeholders. My work in NLP, supported by frameworks such as PyTorch and Hugging Face, enables me to tackle challenging natural language processing projects. On this site, you’ll find updates on my projects, research, and perspectives on data science. I’m excited to connect with professionals in the field and explore innovative applications of AI and data science in real-world contexts.
 
 Feel free to explore the site and connect with me via [LinkedIn](https://www.linkedin.com/in/matheushbps/) or email me at [matheushbps@gmail.com](mailto:matheushbps@gmail.com).
+
+![](images/google_mat.png)

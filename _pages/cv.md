@@ -21,6 +21,8 @@ redirect_from:
 **I'm searching for remote spots in a data driven company where I can apply my Data Science, NLP, LLM and data analysis skills to help
 improve a data driven guided by strong and complex analysis, with powerful results.**
 
+If you're interested in knowing a little more about me, please check my Cover Letter: [Cover Letter](https://matheushbps.github.io/files/MHCL.pdf)
+
 ---
 
 # Education
@@ -170,7 +172,7 @@ Program of Courses in Machine Learning
 Program of Courses in Data Science and Data Analytics  
 **April 2024 – August 2024**
 
-## **Data Camp – Data Scientist Associate** [Certification available here](https://matheushbps.github.io/files/DSA_Associate.pdf)  
+## **Data Camp – Data Scientist Associate** [Certificate](https://matheushbps.github.io/files/DSA_Associate.pdf)  
 *New York – USA*  
 Program of Courses in Data Science  
 **April 2024 – October 2024**
