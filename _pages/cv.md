@@ -39,9 +39,8 @@ improve a data driven guided by strong and complex analysis, with powerful resul
 
 # Professional Experience
 
-## LLM Engineer - Turing (FAAN)
-**Location:** Palo Alto, California, USA  
-**Role:** Data Scientist/LLM Engineer  
+## LLM Engineer - Turing (at a FAANG)
+**Location:** Palo Alto, California, USA  (Remote)
 **Duration:** May 2024 – Present  
 
 - Developed high-quality Jupyter Notebooks in Python to support the Conversational AI Chat system for one of the top 5 Big Tech 
@@ -127,9 +126,9 @@ initiate forecasting and enhance business efficiency.
 # Relevant Experience
 
 ## Data Science/Analytics and Management Team
-  *Belo Horizonte, MG - Brazil (Remote)*   
-  **Role:** Management Team  
-  **Duration:** June 2020 – August 2020  
+**Location:** Belo Horizonte, MG - Brazil (Remote)   
+**Role:** Management Team  
+**Duration:** June 2020 – August 2020  
 
 - Led the construction of a robust database system to manage medication inventory efficiently.  
 - Played a pivotal role in crafting a comprehensive portfolio for an NGO, highlighting its mission, projects, and impact.  
@@ -151,7 +150,7 @@ Compensations, 2022.
 
 # Relevant Certifications
 
-## **DSA – Data Science Academy**  
+## **DSA – Data Science Academy** 
 *Brazilia, DF – Brazil*  
 Program of Courses in Data Science  
 **May 2022 – May 2024**
@@ -171,7 +170,7 @@ Program of Courses in Machine Learning
 Program of Courses in Data Science and Data Analytics  
 **April 2024 – August 2024**
 
-## **Data Camp – Data Scientist Associate**  
+## **Data Camp – Data Scientist Associate**  [Certificate](./images/datacamp_dsa.jpg) 
 *New York – USA*  
 Program of Courses in Data Science  
 **April 2024 – October 2024**
