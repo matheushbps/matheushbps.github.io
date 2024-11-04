@@ -11,7 +11,8 @@ redirect_from:
 
 
 # Tableau Tutoring Experience
-![alt text](image-8.png)
+![alt text](image-9.png)
+
 I had the opportunity to provide comprehensive Tableau classes to a student based in the USA. The curriculum covered a wide range of topics, starting with an introduction to the Tableau interface and its core functionalities. We then delved into data manipulation techniques, including filtering, joining datasets, and creating calculated fields to derive meaningful insights. 
 
 The student also gained hands-on experience in crafting various visualizations, from commonly used charts to impactful annotations, enabling them to build compelling data stories. Recognizing the importance of a strong foundation, I also incorporated basic statistical concepts, differentiating between categorical and numerical variables and exploring essential data aggregation methods like mean, median, and standard deviation. This knowledge empowers the student to create a broader spectrum of visualizations and analyses.
@@ -26,8 +27,8 @@ This experience underscores my ability to not only share technical knowledge but
 
 _____
 
-# *Statistical Analysis and Tutoring Experience
-![alt text](image-9.png)
+# Statistical Analysis and Tutoring Experience
+![alt text](image-8.png)
 
 In addition to my data visualization and Tableau expertise, I've had the privilege of assisting two students with their statistical analysis needs.
 
