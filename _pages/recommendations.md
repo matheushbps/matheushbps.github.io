@@ -9,4 +9,5 @@ redirect_from:
 {% include base_path %}
 <!-- {% include toc %} -->
 
-![Recommendation 1](image.png)
+![alt text](Rec.jpg)
+
