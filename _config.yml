@@ -25,9 +25,9 @@ author:
   name             : "Matheus Henrique"
   pronouns         : "" 
   bio              : "Senior Data Scientist/Data Analyst"
-  studies:         : "Chemical Engineer - UFTM / MSC Data Science and Analytics - USP"
   location         : "Uberaba-MG/Brazil"
   employer         : "LLM Engineer at Turing"
+  scholarship      : "MSC Data Science and Analytics - USP / Chemical Engineer - UFTM" # Add this line
   uri              : 
   email            : "matheushbps@gmail.com" 
 
