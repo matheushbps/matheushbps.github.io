@@ -4,8 +4,8 @@
 
    .masthead {
     position: fixed;
-    background: rgba(176, 226, 255, 0.95);
-    border-bottom: 1px solid rgba(176, 226, 255, 0.8);
+    background: rgba(230, 243, 255, 0.95); // Very light blue
+    border-bottom: 1px solid rgba(230, 243, 255, 0.8);
     height: $masthead-height;
     top: 0;
     width: 100%;
@@ -23,91 +23,58 @@
       padding: 1em;
       font-family: $sans-serif-narrow;
       background: inherit;
-  
-      @include breakpoint($x-large) {
-        max-width: $x-large;
-      }
+      border-color: inherit;
   
       nav {
         z-index: 10;
         background: inherit;
+        border-color: inherit;
       }
   
       a {
         text-decoration: none;
         background: inherit;
+        border-color: inherit;
       }
     }
   }
   
-  .site-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0.5rem 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-weight: bold;
-    z-index: 20;
-    background: inherit;
-  }
-  
-  .masthead__menu {
-    background: inherit;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    clear: both;
-  
-    .site-nav {
-      margin-left: 0;
-      background: inherit;
-  
-      @include breakpoint($small) {
-        float: right;
-      }
-  
-      .navicon {
-        background: inherit;
-      }
-    }
-  
-    ul {
-      margin: 0;
-      padding: 0;
-      clear: both;
-      list-style-type: none;
-      background: inherit;
-  
-      li {
-        background: inherit;
-      }
-    }
-  }
-  
-  // Additional styles for navigation elements
   .greedy-nav {
     background: inherit;
+    border-color: inherit;
     
     .visible-links {
       background: inherit;
+      border-color: inherit;
       
       li {
         background: inherit;
+        border-color: inherit;
         
         a {
           background: inherit;
+          border-color: inherit;
+          
+          &:before {
+            background: inherit;
+          }
         }
       }
     }
     
     .hidden-links {
-      background: rgba(176, 226, 255, 0.95);
+      background: rgba(230, 243, 255, 0.95);
+      border: 1px solid rgba(230, 243, 255, 0.8);
     }
     
     button {
       background: inherit;
+      border-color: inherit;
+    }
+  
+    .navicon,
+    .navicon:before,
+    .navicon:after {
+      background: #000; // Keep the hamburger menu visible
     }
   }
