@@ -13,13 +13,13 @@ main:
 
   - title: "Recommendations"
     url: /recommendations/
-    
-  - title: "Articles"
-    url: /articles/
-        
+          
   - title: "Teaching"
     url: /teaching/
     
+  - title: "Articles"
+    url: /articles/
+  
   - title: 
     url: 
     

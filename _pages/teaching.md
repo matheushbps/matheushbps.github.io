@@ -11,7 +11,7 @@ redirect_from:
 
 
 # Tableau Tutoring Experience
-![alt text](tableau.png)
+![alt text](tableau2.png)
 
 I had the opportunity to provide comprehensive Tableau classes to a student based in the USA. The curriculum covered a wide range of topics, starting with an introduction to the Tableau interface and its core functionalities. We then delved into data manipulation techniques, including filtering, joining datasets, and creating calculated fields to derive meaningful insights. 
 
