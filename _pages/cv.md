@@ -155,42 +155,50 @@ Compensations, 2022.
 
 # Relevant Certifications
 
-## **Google – Google Advanced Analytics**  [Certificate ML Google](https://matheushbps.github.io/files/Google_mat.pdf)
+## **Google – Google Advanced Analytics**
+[Certificate ML Google](https://matheushbps.github.io/files/Google_mat.pdf)
 *Menlo Park – Brazil*  
 Program of Courses in Data Science and Data Analytics  
 **April 2024 – August 2024**
 
-## **Stanford Online – Machine Learning Specialization**  [Certificate ML Stanford](https://matheushbps.github.io/files/Stanford_Mat.pdf)
+## **Stanford Online – Machine Learning Specialization**
+[Certificate ML Stanford](https://matheushbps.github.io/files/Stanford_Mat.pdf)
 *California – USA*  
 Program of Courses in Machine Learning  
 **February 2024 – June 2024**
 
-## **Data Camp – Data Scientist Associate** [Certificate DS Associate](https://matheushbps.github.io/files/DSA_Associate.pdf)  
+## **Data Camp – Data Scientist Associate**
+[Certificate DS Associate](https://matheushbps.github.io/files/DSA_Associate.pdf)  
 *New York – USA*  
 Program of Courses in Data Science  
 **April 2024 – October 2024**
 
-## **DSA – Data Science Academy** [Certificate DS](https://matheushbps.github.io/files/DSA_academy_Mat.pdf)
+## **DSA – Data Science Academy**
+[Certificate DS](https://matheushbps.github.io/files/DSA_academy_Mat.pdf)
 *Brazilia, DF – Brazil*  
 Program of Courses in Data Science  
 **May 2022 – May 2024**
 
-## **Data Camp – Developing AI Applications** [Certificate Developing AI](https://matheushbps.github.io/files/AI_Applications.pdf)
+## **Data Camp – Developing AI Applications**
+[Certificate Developing AI](https://matheushbps.github.io/files/AI_Applications.pdf)
 *New York – USA*  
 Program of Courses in IA  
 **May 2024 – June 2024**
 
-## **Data Camp – Developing Large Language Models** [Certificate Developing LLMs](https://matheushbps.github.io/files/LLM.pdf)
+## **Data Camp – Developing Large Language Models**
+[Certificate Developing LLMs](https://matheushbps.github.io/files/LLM.pdf)
 *New York – USA*  
 Program of Courses in Data Science, Deep Learning and IA  
 **April 2024 – June 2024**
 
-## **Data Camp – Python Data Analyst** [Certificate Data Analyst](https://matheushbps.github.io/files/Data_Analyst_Python.pdf) 
+## **Data Camp – Python Data Analyst**
+[Certificate Data Analyst](https://matheushbps.github.io/files/Data_Analyst_Python.pdf) 
 *New York – USA*  
 Program of Courses in Data Analytics  
 **April 2024 – June 2024**
 
-## **Qintess and Mesttra – Data Science Academy** [Certificate DSA](https://matheushbps.github.io/files/QADS.pdf)
+## **Qintess and Mesttra – Data Science Academy**
+[Certificate DSA](https://matheushbps.github.io/files/QADS.pdf)
 *São Paulo, SP – Brazil*  
 Bootcamp in Data Science  
 **June 2022 – December 2022**
