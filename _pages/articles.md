@@ -23,9 +23,13 @@ This research exemplifies the application of data science and analytics in the f
 5.  **Application to Renewable Energy:** The study's focus on lignocellulosic sorghum for biofuel production underscores the role of data science in advancing sustainable energy solutions and addressing environmental challenges.
 
 Incorporating this research into your portfolio showcases your proficiency in data analysis, algorithm development, and modeling, particularly within the context of renewable energy and sustainability. It highlights your ability to apply data science techniques to real-world challenges and contribute to the development of innovative solutions. 
-Please check it at the following link. PS: The Main language of the article is Portuguese-Brazil: (PYROLYSIS KINETICS FOR LIGNOCELLULOSIC SORGHUM: THERMOGRAVIMETRIC DATA ANALYSIS FOR FRIEDMAN MODEL APPLICATION)[https://matheushbps.github.io/files/cinetica_artigo.pdf]
+Please check it at the following link. PS: The Main language of the article is Portuguese-Brazil: [PYROLYSIS KINETICS FOR LIGNOCELLULOSIC SORGHUM: THERMOGRAVIMETRIC DATA ANALYSIS FOR FRIEDMAN MODEL APPLICATION](https://matheushbps.github.io/files/cinetica_artigo.pdf)
 
-# Modeling and simulation of serial elutriators using Scilab
+
+
+
+
+# MODELING AND SIMULATION OF SERIAL ELUTRIATORS USING SCILAB
 
 The reference article delves into the modeling and simulation of elutriators, which are industrial separation units used to segregate particles based on their size and density differences. The research employs Scilab, a numerical computation software, to simulate a series of three elutriators handling particles of varying densities. The study systematically investigates the impact of key parameters like fluidization velocity, flow rate, and an empirical exponent (alpha) on the elutriation process. The core objective is to optimize these parameters to achieve efficient separation of particles within the elutriator system.
 
@@ -37,4 +41,4 @@ This research exemplifies a practical application of data science and analytics 
 * **Parameter Optimization**: The study explores the parameter space by systematically varying key variables. This approach aligns with the data science practice of hyperparameter tuning, where the goal is to discover the optimal configuration that maximizes the performance of a model or system.
 * **Data Visualization**: The results are presented graphically, showcasing the impact of parameter changes on system behavior. Effective data visualization is crucial in data science for communicating insights and patterns hidden within the data.
 * **Process Optimization**: Ultimately, the research aims to identify the ideal operating conditions for the elutriator system. This directly translates to process optimization in industrial settings, a common goal in data science projects aimed at improving efficiency and productivity.
-Please check it at the following link. PS: The Main language of the article is Portuguese-Brazil: (Modeling and simulation of serial elutriators using Scilab)[https://matheushbps.github.io/files/elutriacao_artigo.pdf]
+Please check it at the following link. PS: The Main language of the article is Portuguese-Brazil: [MODELING AND SIMULATION OF SERIAL ELUTRIATORS USING SCILAB](https://matheushbps.github.io/files/elutriacao_artigo.pdf)
