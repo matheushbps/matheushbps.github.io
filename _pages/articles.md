@@ -10,6 +10,8 @@ redirect_from:
 {% include toc %}
 
 # PYROLYSIS KINETICS FOR LIGNOCELLULOSIC SORGHUM: THERMOGRAVIMETRIC DATA ANALYSIS FOR FRIEDMAN MODEL APPLICATION
+![alt text](kinetic.png)
+
 The reference text investigates the pyrolysis kinetics of lignocellulosic sorghum, a renewable resource with potential for biofuel production. The study employs thermogravimetric analysis (TGA) to examine the thermal decomposition of sorghum biomass under slow pyrolysis conditions. The Friedman model is applied to determine kinetic parameters, notably the activation energy, crucial for understanding the reaction pathways and optimizing pyrolysis processes. A custom algorithm is developed to enhance the accuracy of kinetic parameter calculations by mitigating the influence of experimental noise in TGA data. The findings contribute valuable insights into the pyrolysis behavior of lignocellulosic sorghum, aiding in the development of sustainable energy solutions and biorefinery processes.
 
 **Relevance to Data Science and Analytics:**
@@ -30,6 +32,7 @@ Please check it at the following link. PS: The Main language of the article is P
 
 
 # MODELING AND SIMULATION OF SERIAL ELUTRIATORS USING SCILAB
+![alt text](elutriador.png)
 
 The reference article delves into the modeling and simulation of elutriators, which are industrial separation units used to segregate particles based on their size and density differences. The research employs Scilab, a numerical computation software, to simulate a series of three elutriators handling particles of varying densities. The study systematically investigates the impact of key parameters like fluidization velocity, flow rate, and an empirical exponent (alpha) on the elutriation process. The core objective is to optimize these parameters to achieve efficient separation of particles within the elutriator system.
 
