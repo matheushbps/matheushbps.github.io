@@ -23,6 +23,9 @@ improve a data driven guided by strong and complex analysis, with powerful resul
 
 If you're interested in knowing a little more about me, please check my Cover Letter: [Cover Letter](https://matheushbps.github.io/files/MHCL.pdf)
 
+If you want to refer to my PDF CV, it's available at the following:
+[Matheus' CV](https://matheushbps.github.io/files/CV Matheus HBPS 2024.pdf)
+
 ---
 
 # Education
