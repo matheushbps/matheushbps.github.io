@@ -27,7 +27,9 @@ author:
   bio              : "Senior Data Scientist/Data Analyst"
   location         : "Uberaba-MG/Brazil"
   employer         : "LLM Engineer at Turing"
-  scholarship      : "MSC Data Science and Analytics - USP / Chemical Engineer - UFTM" # Add this line
+  scholarship      : >
+    MSC Data Science and Analytics - USP<br>
+    Chemical Engineer - UFTM
   uri              : 
   email            : "matheushbps@gmail.com" 
 
