@@ -1,56 +1,64 @@
 /* _sass/_toc.scss */
 .toc {
     position: fixed !important;
-    right: 350px; // Adjust based on sidebar width
-    top: 80px; // Below header
-    width: 250px;
-    max-height: calc(100vh - 100px);
+    right: 320px !important;
+    top: 80px !important;
+    width: 200px !important;
+    max-height: calc(100vh - 100px) !important;
     overflow-y: auto;
-    background: rgba(230, 243, 255, 0.95);
-    padding: 15px;
-    border-left: 3px solid #4A90E2;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    z-index: 99;
+    background: rgba(235, 245, 255, 0.95) !important;
+    padding: 15px !important;
+    border-left: 3px solid #89CFF0 !important;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1) !important;
+    z-index: 99 !important;
+    font-size: 0.8em !important;
+    line-height: 1.4 !important;
+    margin-right: 20px !important;
   
     nav {
-      background: rgba(230, 243, 255, 0.95);
+        background: rgba(235, 245, 255, 0.95) !important;
     }
   
     .nav__title {
-      background: #4A90E2 !important;
-      color: #fff;
-      padding: 10px 15px;
-      margin: -15px -15px 15px;
+        background: #89CFF0 !important;
+        color: #fff !important;
+        padding: 10px 15px !important;
+        margin: -15px -15px 15px !important;
+        font-size: 1em !important;
     }
   
     .toc__menu {
-      margin: 0;
-      padding: 0;
-      font-size: 0.9em;
-      
-      li {
-        list-style-type: none;
-        padding: 5px 0;
+        margin: 0;
+        padding: 0;
         
-        a {
-          color: #2076cc;
-          text-decoration: none;
-          
-          &:hover {
-            color: darken(#2076cc, 15%);
-            text-decoration: underline;
-          }
+        li {
+            list-style-type: none;
+            padding: 5px 0;
+            
+            a {
+                color: #7CB9E8;
+                text-decoration: none;
+                
+                &:hover {
+                    color: darken(#7CB9E8, 10%);
+                    text-decoration: underline;
+                }
+            }
+            
+            ul {
+                padding-left: 15px;
+                font-size: 0.95em !important;
+            }
         }
-        
-        ul {
-          padding-left: 15px;
-        }
-      }
     }
-  }
-  
-  // Ensure TOC stays visible when scrolling
-  .toc.sticky {
-    position: fixed;
-    top: 80px;
-  }
+
+    ~ .page__content {
+        padding-right: 250px !important;
+    }
+}
+
+// Ensure TOC stays visible when scrolling
+.toc.sticky {
+    position: fixed !important;
+    top: 80px !important;
+}
