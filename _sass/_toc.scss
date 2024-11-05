@@ -1,19 +1,36 @@
 /* _sass/_toc.scss */
 .toc {
     position: fixed !important;
-    right: 20px !important;  // Changed from 320px to 20px to position it on the far right
+    right: 20px !important;
     top: 80px !important;
-    width: 250px !important;  // Increased width slightly for better readability
-    background: rgba(235, 245, 255, 0.98) !important;  // Slightly more opaque background
+    width: 250px !important;
+    background: rgba(235, 245, 255, 0.1) !important; // 90% transparency
     padding: 15px !important;
     border-left: 3px solid #89CFF0 !important;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1) !important;
     z-index: 99 !important;
     font-size: 0.8em !important;
     line-height: 1.4 !important;
+    transition: transform 0.3s ease-in-out !important;
+
+    &__toggle {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        background: none !important;
+        border: none !important;
+        color: #4A90E2 !important;
+        cursor: pointer !important;
+        padding: 5px !important;
+        font-size: 1.2em !important;
+    }
+
+    &.is-hidden {
+        transform: translateX(calc(100% - 30px)) !important;
+    }
   
     nav {
-        background: rgba(235, 245, 255, 0.98) !important;
+        background: rgba(235, 245, 255, 0.1) !important;
     }
   
     .nav__title {
@@ -33,7 +50,7 @@
             padding: 5px 0;
             
             a {
-                color: #4A90E2;  // Darker blue for better contrast
+                color: #4A90E2;
                 text-decoration: none;
                 
                 &:hover {
@@ -50,11 +67,10 @@
     }
 
     ~ .page__content {
-        margin-right: 270px !important;  // Adjusted to prevent content overlap
+        margin-right: 270px !important;
     }
 }
 
-// Sticky behavior remains but without scroll
 .toc.sticky {
     position: fixed !important;
     top: 80px !important;
