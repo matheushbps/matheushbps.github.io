@@ -11,6 +11,11 @@ redirect_from:
 
 # Matheus Henrique Batista Palmieri da Silva
 
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <h1>Matheus Henrique Batista Palmieri da Silva</h1>
+  <img src="{{ base_path }}/images/google_mat.png" alt="Google Mat" style="width: 40px; height: 40px;">
+</div>
+
 **Location:** Uberaba, Brazil  
 **Contact:** +5534997934924 | matheushbps@gmail.com  
 **LinkedIn:** [Matheus Henrique LinkedIn](https://www.linkedin.com/in/matheushbps/)  
