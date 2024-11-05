@@ -26,8 +26,8 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #ddd; /* Added border */
-  min-height: 50px; /* Reduced height */
+  border-bottom: 1px solid #dddddd75; /* Added border */
+  min-height: 60px; /* Reduced height */
 }
 
 .masthead__inner-wrap {
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px; /* Fixed height */
+  height: 60px; /* Fixed height */
   
   .visible-links {
    display: flex;
