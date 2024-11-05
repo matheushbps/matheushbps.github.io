@@ -11,7 +11,7 @@ redirect_from:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h1>Matheus Henrique Batista Palmieri da Silva</h1>
-  <img src="{{ base_path }}/images/google_mat.png" alt="Google Mat" style="width: 120px; height: 120px;">
+  <img src="{{ base_path }}/images/google_mat.png" alt="Google Mat" style="width: 160px; height: 160px;">
 </div>
 
 **Location:** Uberaba, Brazil  
