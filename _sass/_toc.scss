@@ -1,22 +1,19 @@
 /* _sass/_toc.scss */
 .toc {
     position: fixed !important;
-    right: 320px !important;
+    right: 20px !important;  // Changed from 320px to 20px to position it on the far right
     top: 80px !important;
-    width: 200px !important;
-    max-height: calc(100vh - 100px) !important;
-    overflow-y: auto;
-    background: rgba(235, 245, 255, 0.95) !important;
+    width: 250px !important;  // Increased width slightly for better readability
+    background: rgba(235, 245, 255, 0.98) !important;  // Slightly more opaque background
     padding: 15px !important;
     border-left: 3px solid #89CFF0 !important;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1) !important;
     z-index: 99 !important;
     font-size: 0.8em !important;
     line-height: 1.4 !important;
-    margin-right: 20px !important;
   
     nav {
-        background: rgba(235, 245, 255, 0.95) !important;
+        background: rgba(235, 245, 255, 0.98) !important;
     }
   
     .nav__title {
@@ -36,11 +33,11 @@
             padding: 5px 0;
             
             a {
-                color: #7CB9E8;
+                color: #4A90E2;  // Darker blue for better contrast
                 text-decoration: none;
                 
                 &:hover {
-                    color: darken(#7CB9E8, 10%);
+                    color: darken(#4A90E2, 15%);
                     text-decoration: underline;
                 }
             }
@@ -53,11 +50,11 @@
     }
 
     ~ .page__content {
-        padding-right: 250px !important;
+        margin-right: 270px !important;  // Adjusted to prevent content overlap
     }
 }
 
-// Ensure TOC stays visible when scrolling
+// Sticky behavior remains but without scroll
 .toc.sticky {
     position: fixed !important;
     top: 80px !important;
