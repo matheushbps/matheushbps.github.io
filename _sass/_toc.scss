@@ -1,0 +1,39 @@
+/* Add to _sass/_toc.scss or your custom CSS file */
+.toc {
+    position: fixed;
+    right: 0;
+    top: 80px; // Adjust based on header height
+    width: 250px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    background: rgba(230, 243, 255, 0.95); // Light blue background
+    padding: 15px;
+    border-left: 3px solid #4A90E2; // Blue border
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 999;
+  
+    .toc__menu {
+      margin: 0;
+      padding: 0;
+      font-size: 0.9em;
+      
+      a {
+        color: #2076cc; // Blue links
+        text-decoration: none;
+        
+        &:hover {
+          color: darken(#2076cc, 15%);
+          text-decoration: underline;
+        }
+      }
+  
+      li {
+        list-style-type: none;
+        padding: 5px 0;
+        
+        ul {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
