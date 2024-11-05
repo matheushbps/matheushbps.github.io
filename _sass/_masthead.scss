@@ -20,14 +20,59 @@
   background: rgba(230, 243, 255, 0.95) !important;
 }
 
+/* Fixed position and center alignment */
+.masthead {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.greedy-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .visible-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    li {
+      flex: 0 0 auto;
+      
+      a {
+        position: relative;
+        color: $text-color;
+        text-decoration: none;
+        
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 4px;
+          background: $primary-color !important;
+          width: 100%;
+          transform: scaleX(0);
+          transition: transform 0.2s ease;
+        }
+        
+        &:hover {
+          color: $primary-color;
+          
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Exception for hamburger menu lines */
 .greedy-nav .navicon,
 .greedy-nav .navicon:before,
 .greedy-nav .navicon:after {
   background: #000 !important;
-}
-
-/* Keep hover effect */
-.greedy-nav .visible-links a:before {
-  background: $primary-color !important;
 }
