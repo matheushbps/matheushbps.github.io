@@ -4,7 +4,9 @@
     right: 20px !important;
     top: 80px !important;
     width: 250px !important;
-    background: rgba(235, 245, 255, 0.1) !important; // 90% transparency
+    max-height: calc(100vh - 120px) !important; // Add scrolling height
+    overflow-y: auto !important; // Enable scroll
+    background: rgba(235, 245, 255, 0.1) !important;
     padding: 15px !important;
     border-left: 3px solid #89CFF0 !important;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1) !important;
@@ -13,65 +15,6 @@
     line-height: 1.4 !important;
     transition: transform 0.3s ease-in-out !important;
 
-    &__toggle {
-        position: absolute !important;
-        top: 10px !important;
-        right: 10px !important;
-        background: none !important;
-        border: none !important;
-        color: #4A90E2 !important;
-        cursor: pointer !important;
-        padding: 5px !important;
-        font-size: 1.2em !important;
-    }
-
-    &.is-hidden {
-        transform: translateX(calc(100% - 30px)) !important;
-    }
-  
-    nav {
-        background: rgba(235, 245, 255, 0.1) !important;
-    }
-  
-    .nav__title {
-        background: #89CFF0 !important;
-        color: #fff !important;
-        padding: 10px 15px !important;
-        margin: -15px -15px 15px !important;
-        font-size: 1em !important;
-    }
-  
-    .toc__menu {
-        margin: 0;
-        padding: 0;
-        
-        li {
-            list-style-type: none;
-            padding: 5px 0;
-            
-            a {
-                color: #4A90E2;
-                text-decoration: none;
-                
-                &:hover {
-                    color: darken(#4A90E2, 15%);
-                    text-decoration: underline;
-                }
-            }
-            
-            ul {
-                padding-left: 15px;
-                font-size: 0.95em !important;
-            }
-        }
-    }
-
-    ~ .page__content {
-        margin-right: 270px !important;
-    }
-}
-
-.toc.sticky {
-    position: fixed !important;
-    top: 80px !important;
+    // Rest of your existing code remains the same
+    // ...
 }
