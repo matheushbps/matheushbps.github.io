@@ -49,6 +49,11 @@
 }
 
 .page__content {
+  margin-right: 150px !important; /* Space for TOC */
+
+  @media screen and (max-width: 768px) {
+    margin-right: 120px !important; /* Adjusted for smaller screens */
+  }
 
   h2 {
     padding-bottom: 0.5em;
