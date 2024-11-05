@@ -1,41 +1,19 @@
-/* _sass/_toc.scss */
+/* Add to _sass/_toc.scss */
 .toc {
-    position: fixed !important;
-    right: 20px !important;
-    top: 80px !important;
-    width: 125px !important; /* Reduced width to half */
-    max-height: calc(100vh - 120px) !important;
-    overflow-y: auto !important;
-    background: rgba(235, 245, 255, 0.1) !important;
-    padding: 10px !important; /* Adjusted padding */
-    border-left: 3px solid #89CFF0 !important;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1) !important;
-    z-index: 99 !important;
-    font-size: 0.75em !important; /* Slightly reduced font size */
-    line-height: 1.4 !important;
-    transition: transform 0.3s ease-in-out !important;
-
-    &__toggle {
-        position: absolute !important;
-        top: 5px !important;
-        right: 5px !important; /* Adjust if necessary */
-        background: none !important;
-        border: none !important;
-        cursor: pointer !important;
-        padding: 5px !important;
-        z-index: 100 !important;
-        display: block !important;
-        font-size: 1.2em !important;
-    }
-
+    transition: transform 0.3s ease-in-out;
+    
     &.is-hidden {
-        transform: translateX(calc(100% - 30px)) !important;
+        transform: translateX(100%);
     }
+}
 
-    /* Adjust the page content to prevent overlap */
-    ~ .page__content {
-        margin-right: 145px !important; /* 125px width + 20px spacing */
-    }
-
-    /* Rest of your existing code remains the same */
+.toc__toggle {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    z-index: 100;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
 }
