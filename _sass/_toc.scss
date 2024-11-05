@@ -3,7 +3,7 @@
     position: fixed !important;
     right: 20px !important;
     top: 80px !important;
-    width: 250px !important; /* Reduced width to half */
+    width: 200px !important; /* Reduced width to half */
     max-height: calc(100vh - 120px) !important;
     overflow-y: auto !important;
     background: rgba(235, 245, 255, 0.1) !important;
@@ -14,7 +14,7 @@
     font-size: 0.75em !important; /* Slightly reduced font size */
     line-height: 1.4 !important;
     transition: transform 0.3s ease-in-out !important;
-
+    
     &__toggle {
         position: absolute !important;
         top: 5px !important;
@@ -30,7 +30,11 @@
 
     &.is-hidden {
         transform: translateX(100%) !important;
-        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hide the TOC title */
+    .nav__title {
+        display: none !important;
     }
 
     /* Adjust the page content to prevent overlap */
@@ -38,9 +42,13 @@
         margin-right: 145px !important; /* 125px width + 20px spacing */
     }
 
-    /* Rest of your existing code remains the same */
-}
-
-.toc.is-hidden {
-    display: none !important;
+    /* Ensure the TOC remains scrollable */
+    @media screen and (max-width: 768px) {
+        .toc {
+            width: 100px !important; /* Further reduced width for smaller screens */
+            ~ .page__content {
+                margin-right: 120px !important; /* Adjusted margin for smaller TOC */
+            }
+        }
+    }
 }
