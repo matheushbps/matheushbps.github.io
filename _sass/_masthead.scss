@@ -2,108 +2,32 @@
    MASTHEAD
    ========================================================================== */
 
-   .masthead {
-    position: fixed;
-    background: rgba(230, 243, 255, 0.95); // Very light blue
-    border-bottom: 1px solid rgba(230, 243, 255, 0.8);
-    height: $masthead-height;
-    top: 0;
-    width: 100%;
-    backdrop-filter: blur(5px);
-  
-    -webkit-animation: intro 0.3s both;
-         animation: intro 0.3s both;
-    -webkit-animation-delay: 0.15s;
-         animation-delay: 0.15s;
-    z-index: 20;
-  
-    &__inner-wrap {
-      @include container;
-      @include clearfix;
-      padding: 1em;
-      font-family: $sans-serif-narrow;
-      background: inherit;
-      border-color: inherit;
-  
-      nav {
-        z-index: 10;
-        background: inherit;
-        border-color: inherit;
-      }
-  
-      a {
-        text-decoration: none;
-        background: inherit;
-        border-color: inherit;
-      }
-    }
-  }
-  
-  .greedy-nav {
-    background: inherit;
-    border-color: inherit;
-    
-    .visible-links {
-      background: inherit;
-      border-color: inherit;
-      
-      li {
-        background: inherit;
-        border-color: inherit;
-        
-        a {
-          background: inherit;
-          border-color: inherit;
-          position: relative;
-          
-          &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 4px;
-            background: $primary-color;
-            width: 100%;
-            -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            transform: scaleX(0);
-            transition: all 0.2s ease-in-out;
-          }
-  
-          &:hover {
-            color: $primary-color;
-            
-            &:before {
-              -webkit-transform: scaleX(1);
-              -ms-transform: scaleX(1);
-              transform: scaleX(1);
-            }
-          }
-        }
-      }
-    }
-    
-    .hidden-links {
-      background: rgba(230, 243, 255, 0.95);
-      border: 1px solid rgba(230, 243, 255, 0.8);
-  
-      a {
-        color: $primary-color;
-        
-        &:hover {
-          color: mix(#000, $primary-color, 25%);
-        }
-      }
-    }
-    
-    button {
-      background: inherit;
-      border-color: inherit;
-    }
-  
-    .navicon,
-    .navicon:before,
-    .navicon:after {
-      background: #000;
-    }
-  }
+/* Global header background fix */
+.masthead,
+.masthead *,
+.greedy-nav,
+.greedy-nav *,
+.masthead__inner-wrap,
+.masthead__inner-wrap *,
+.masthead__menu,
+.masthead__menu *,
+.site-nav,
+.site-nav *,
+.visible-links,
+.visible-links *,
+.hidden-links,
+.hidden-links * {
+  background: rgba(230, 243, 255, 0.95) !important;
+}
+
+/* Exception for hamburger menu lines */
+.greedy-nav .navicon,
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+  background: #000 !important;
+}
+
+/* Keep hover effect */
+.greedy-nav .visible-links a:before {
+  background: $primary-color !important;
+}
