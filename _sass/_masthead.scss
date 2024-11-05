@@ -1,6 +1,6 @@
 /* ==========================================================================
-   MASTHEAD
-   ========================================================================== */
+  MASTHEAD
+  ========================================================================== */
 
 /* Global header background fix */
 .masthead,
@@ -26,47 +26,55 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  border-bottom: 1px solid #ddd; /* Added border */
+  min-height: 50px; /* Reduced height */
+}
+
+.masthead__inner-wrap {
+  padding: 0.5em; /* Reduced padding */
 }
 
 .greedy-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px; /* Fixed height */
   
   .visible-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   li {
+    flex: 0 0 auto;
     
-    li {
-      flex: 0 0 auto;
+    a {
+      position: relative;
+      color: $text-color;
+      text-decoration: none;
+      padding: 0.5em 1em; /* Adjusted padding */
       
-      a {
-        position: relative;
-        color: $text-color;
-        text-decoration: none;
-        
-        &:before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 4px;
-          background: $primary-color !important;
-          width: 100%;
-          transform: scaleX(0);
-          transition: transform 0.2s ease;
-        }
-        
-        &:hover {
-          color: $primary-color;
-          
-          &:before {
-            transform: scaleX(1);
-          }
-        }
+      &:before {
+       content: "";
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       height: 4px;
+       background: $primary-color !important;
+       width: 100%;
+       transform: scaleX(0);
+       transition: transform 0.2s ease;
+      }
+      
+      &:hover {
+       color: $primary-color;
+       
+       &:before {
+        transform: scaleX(1);
+       }
       }
     }
+   }
   }
 }
 
