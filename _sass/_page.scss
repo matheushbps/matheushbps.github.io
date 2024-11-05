@@ -57,10 +57,6 @@
 
   p, li, dl {
     font-size: 1em;
-  margin-right: 150px !important; /* Space for TOC */
-  
-  @media screen and (max-width: 768px) {
-    margin-right: 120px !important; /* Adjusted for smaller screens */
   }
 
   /* paragraph indents */
