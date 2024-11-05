@@ -4,8 +4,8 @@
     right: 20px !important;
     top: 80px !important;
     width: 250px !important;
-    max-height: calc(100vh - 120px) !important; // Add scrolling height
-    overflow-y: auto !important; // Enable scroll
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
     background: rgba(235, 245, 255, 0.1) !important;
     padding: 15px !important;
     border-left: 3px solid #89CFF0 !important;
@@ -14,6 +14,18 @@
     font-size: 0.8em !important;
     line-height: 1.4 !important;
     transition: transform 0.3s ease-in-out !important;
+
+    &__toggle {
+        position: absolute !important;
+        top: 5px !important;
+        right: 10px !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 5px !important;
+        z-index: 100 !important;
+        display: block !important;
+    }
 
     // Rest of your existing code remains the same
     // ...
