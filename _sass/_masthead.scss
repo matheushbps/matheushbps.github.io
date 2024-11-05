@@ -26,19 +26,19 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #dddddd47; /* Added border */
-  min-height: 60px; /* Reduced height */
+  border-bottom: 1px solid #dddddd47;
+  min-height: 50px; /* Reduced from 60px to 50px */
 }
 
 .masthead__inner-wrap {
-  padding: 0.5em; /* Reduced padding */
+  padding: 0.4em; /* Slightly reduced padding */
 }
 
 .greedy-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px; /* Fixed height */
+  height: 50px; /* Reduced from 60px to 50px */
   
   .visible-links {
    display: flex;
@@ -52,7 +52,7 @@
       position: relative;
       color: $text-color;
       text-decoration: none;
-      padding: 0.5em 1em; /* Adjusted padding */
+      padding: 0.4em 0.8em; /* Slightly reduced padding */
       
       &:before {
        content: "";
