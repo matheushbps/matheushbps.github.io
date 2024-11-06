@@ -20,14 +20,15 @@ layout: none
             top: 70px;
             width: 300px;
             height: calc(100vh - 70px);
-            text-align: center;
+            text-align: left;  /* Changed to left */
+            padding-left: 20px; /* Added padding for better spacing */
         }
         .sidebar img {
             margin: 0 auto;
             display: block;
         }
         .author__content {
-            text-align: center;
+            text-align: left;  /* Changed to left */
             padding: 15px;
         }
         .content-wrapper {
@@ -36,28 +37,23 @@ layout: none
             width: calc(100% - 300px);
         }
         .toc {
-            font-size: 1.1em !important;
+            font-size: 1.2em !important;  /* Increased font size */
             position: fixed;
             right: 20px;
             top: 80px;
             width: 280px;
             padding: 10px;
+            text-align: left;
         }
         .toc__menu {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.5;
+            font-weight: bold;  /* Added bold */
         }
         .toc .nav__title {
-            font-size: 1.2em;
+            font-size: 1.3em;
             padding: 8px 12px;
+            font-weight: bold;
         }
     </style>
 </head>
-<body>
-    {% include masthead.html %}
-    {% include sidebar.html %}
-    <div class="content-wrapper">
-        {{ content }}
-    </div>
-</body>
-</html>
