@@ -6,11 +6,11 @@
     width: 250px !important;
     max-height: calc(100vh - 120px) !important;
     overflow-y: auto !important;
-    background: rgba(235, 245, 255, 0.95) !important; // More opaque background
+    background: rgba(235, 245, 255, 0.1) !important;
     padding: 10px !important;
     border-left: 3px solid #89CFF0 !important;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1) !important;
-    z-index: 1000 !important; // Increased z-index
+    z-index: 99 !important;
     font-size: 0.75em !important;
     line-height: 1.4 !important;
     transition: all 0.3s ease-in-out !important;
@@ -18,12 +18,12 @@
     &__toggle {
         position: absolute !important;
         top: 5px !important;
-        left: 5px !important; // Changed to left
+        right: 5px !important;
         background: none !important;
         border: none !important;
         cursor: pointer !important;
         padding: 5px !important;
-        z-index: 1001 !important; // Higher than parent
+        z-index: 100 !important;
         display: block !important;
         font-size: 1.2em !important;
         transition: transform 0.3s ease !important;
@@ -34,20 +34,37 @@
     }
 
     &.is-hidden {
-        transform: translateX(270px) !important; // Match width + padding
+        transform: translateX(calc(100% + 20px)) !important;
         opacity: 0.3 !important;
         pointer-events: none !important;
         
         ~ .page__content {
             margin-right: 0 !important;
-            width: 100% !important;
         }
     }
 
-    // Force content to make space for TOC
+    .nav__title {
+        display: none !important;
+    }
+
     ~ .page__content {
         margin-right: 270px !important;
-        width: calc(100% - 270px) !important;
-        transition: all 0.3s ease-in-out !important;
+        transition: margin-right 0.3s ease-in-out !important;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100px !important;
+        
+        ~ .page__content {
+            margin-right: 120px !important;
+        }
+        
+        &.is-hidden {
+            transform: translateX(120px) !important;
+            
+            ~ .page__content {
+                margin-right: 0 !important;
+            }
+        }
     }
 }
