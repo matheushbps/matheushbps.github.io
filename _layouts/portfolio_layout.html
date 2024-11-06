@@ -83,19 +83,20 @@ layout: none
 
         /* Main Content Wrapper */
         .content-wrapper {
-            margin-left: 300px;          /* Space for sidebar */
-            margin-top: 70px;            /* Space for header */
-            width: calc(100% - 300px);   /* Full remaining width */
-            padding: 20px;               /* Add padding for content */
-            position: relative;          /* Ensure proper positioning */
+            margin-left: 300px;
+            padding: 70px 20px 20px 20px; /* Combined all padding, top padding accounts for header */
+            width: calc(100% - 300px);
+            position: relative;
+            min-height: calc(100vh - 70px); /* Ensure minimum height */
         }
 
         /* Table of Contents (TOC) Styling */
         .toc {
             font-size: 30px !important;     /* Slightly reduced font size */
             font-weight: bold;
-            position: sticky;
-            top: 70px;                      /* Adjust top to match header height */
+            position: fixed;          /* Changed from sticky to fixed */
+            top: 70px;
+            right: 20px;             /* Position it on the right */
             width: 400px;                   /* Wider container */
             padding: 20px;                  /* More padding */
             text-align: left !important;
@@ -104,6 +105,7 @@ layout: none
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow-y: auto;               /* Enable scrolling */
             max-height: calc(100vh - 90px); /* Prevent overflow */
+            z-index: 999; /* Ensure it stays above content but below header */
         }
 
         .toc__menu {
@@ -179,6 +181,28 @@ layout: none
             text-decoration: underline;
         }
 
+        /* Base TOC styles for different heading levels */
+        .toc a[href^="#"]:not([href*="##"]):not([href*="###"]):not([href*="####"]) {
+            font-size: 40px !important; /* Top level headers (#) */
+        }
+
+        .toc a[href*="##"]:not([href*="###"]):not([href*="####"]) {
+            font-size: 35px !important; /* Second level headers (##) */
+        }
+
+        .toc a[href*="###"]:not([href*="####"]) {
+            font-size: 30px !important; /* Third level headers (###) */
+        }
+
+        .toc a[href*="####"] {
+            font-size: 25px !important; /* Fourth level headers (####) */
+        }
+
+        /* Override previous all-encompassing font-size rules */
+        .toc, .toc *, .toc ul, .toc li {
+            font-size: inherit !important;
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 1024px) {
             .sidebar {
@@ -220,11 +244,9 @@ layout: none
             }
 
             .content-wrapper {
-                margin-left: 0 !important;   /* Remove left margin */
-                margin-right: 0 !important;  /* Remove right margin */
-                width: 100% !important;      /* Full width */
-                padding: 10px !important;    /* Reduce padding */
-                margin-top: 70px !important; /* Ensure no blank space at top */
+                margin: 0 !important;
+                width: 100% !important;
+                padding: 70px 10px 10px 10px !important; /* Adjust padding to account for header */
             }
 
             /* Ensure header stays visible */
@@ -247,8 +269,10 @@ layout: none
                     const targetElement = document.getElementById(targetId);
 
                     if (targetElement) {
+                        // Calculate position to show full header
+                        const position = targetElement.getBoundingClientRect().top + window.pageYOffset;
                         window.scrollTo({
-                            top: targetElement.offsetTop - headerHeight,
+                            top: position - (headerHeight + 10), // Added small offset for better visibility
                             behavior: 'smooth'
                         });
                     }
