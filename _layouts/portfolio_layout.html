@@ -84,10 +84,11 @@ layout: none
         /* Main Content Wrapper */
         .content-wrapper {
             margin-left: 300px;
-            padding: 70px 20px 20px 20px; /* Combined all padding, top padding accounts for header */
+            padding: 20px 20px 20px 20px; /* Reduced top padding */
             width: calc(100% - 300px);
             position: relative;
-            min-height: calc(100vh - 70px); /* Ensure minimum height */
+            min-height: calc(100vh - 70px);
+            margin-top: 70px; /* Add this to account for fixed header */
         }
 
         /* Table of Contents (TOC) Styling */
@@ -95,7 +96,7 @@ layout: none
             font-size: 30px !important;     /* Slightly reduced font size */
             font-weight: bold;
             position: fixed;          /* Changed from sticky to fixed */
-            top: 70px;
+            top: 70px; /* Align with content, just below header */
             right: 20px;             /* Position it on the right */
             width: 500px;            /* Increased width for better readability */
             padding: 30px;           /* Increased padding */
@@ -108,21 +109,37 @@ layout: none
             z-index: 999; /* Ensure it stays above content but below header */
         }
 
+        /* Increase TOC font sizes */
         .toc__menu {
             font-size: 24px !important;
-            line-height: 1.6 !important;
-            text-align: left !important;
         }
 
         .toc .nav__title {
-            font-size: 32px !important;
+            font-size: 36px !important;
             padding: 15px;
-            text-align: left !important;
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 15px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+        }
+
+        /* Override TOC link sizes */
+        .toc__menu li > a[href^="#"]:not([href*="##"]):not([href*="###"]):not([href*="####"]) {
+            font-size: 32px !important;
+        }
+
+        .toc__menu li > a[href*="##"]:not([href*="###"]):not([href*="####"]) {
+            font-size: 28px !important;
+        }
+
+        .toc__menu li > a[href*="###"]:not([href*="####"]) {
+            font-size: 24px !important;
+        }
+
+        .toc__menu li > a[href*="####"] {
+            font-size: 20px !important;
+        }
+
+        /* Increase spacing between TOC items */
+        .toc__menu li {
+            margin-bottom: 20px !important;
+            line-height: 1.4 !important;
         }
 
         /* Ensure TOC font size is applied */
