@@ -94,8 +94,7 @@ layout: none
         .toc {
             font-size: 30px !important;     /* Slightly reduced font size */
             font-weight: bold;
-            position: fixed;
-            right: 20px;
+            position: sticky;
             top: 70px;                      /* Adjust top to match header height */
             width: 400px;                   /* Wider container */
             padding: 20px;                  /* More padding */
@@ -150,11 +149,33 @@ layout: none
         .toc a[href*="##"]:before {
             content: attr(href);
             display: inline-block;
-            font-size: 2.0em; /* Adjust as needed */
+            font-size: 2.5em; /* Adjust as needed */
             margin-right: 10px;
         }
 
         .toc a[href*="##"]:hover:before {
+            text-decoration: underline;
+        }
+
+        .toc a[href*="###"]:before {
+            content: attr(href);
+            display: inline-block;
+            font-size: 2.0em; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        .toc a[href*="###"]:hover:before {
+            text-decoration: underline;
+        }
+
+        .toc a[href*="####"]:before {
+            content: attr(href);
+            display: inline-block;
+            font-size: 1.5em; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        .toc a[href*="####"]:hover:before {
             text-decoration: underline;
         }
 
@@ -203,6 +224,7 @@ layout: none
                 margin-right: 0 !important;  /* Remove right margin */
                 width: 100% !important;      /* Full width */
                 padding: 10px !important;    /* Reduce padding */
+                margin-top: 70px !important; /* Ensure no blank space at top */
             }
 
             /* Ensure header stays visible */
