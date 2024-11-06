@@ -8,63 +8,172 @@ layout: none
     <title>{{ page.title }}</title>
     {% include head.html %}
     <style>
+        /* Header Styling */
         .masthead {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            background-color: #fff; /* Ensure header has a background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
         }
+
+        /* Sidebar Styling */
         .sidebar {
             position: fixed;
             left: 0;
-            top: 70px;
+            top: 70px; /* Height of the header */
             width: 300px;
             height: calc(100vh - 70px);
-            text-align: left;
+            text-align: left; /* Align text to the left */
+            background-color: #f9f9f9; /* Optional: Sidebar background */
+            padding: 20px; /* Inner padding for content */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to sidebar */
+            overflow-y: auto; /* Enable scrolling if content overflows */
         }
+
+        /* Sidebar Image Styling */
         .sidebar img {
             margin: 0 auto;
             display: block;
+            border-radius: 50%; /* Optional: Make avatar circular */
+            width: 100px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
         }
+
+        /* Author Content Styling */
         .author__content {
-            text-align: left;
-            padding: 15px;
+            text-align: left; /* Ensure left alignment */
+            padding: 15px 0; /* Vertical padding */
         }
+
+        .author__content h2 {
+            margin: 10px 0 5px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .author__content h3 {
+            margin: 5px 0 15px 0;
+            font-size: 1.2em;
+            color: #555; /* Optional: Subtle color for subtitle */
+        }
+
+        .author__content p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        .author__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .author__content ul li {
+            margin: 5px 0;
+        }
+
+        .author__content ul li a {
+            text-decoration: none;
+            color: #007acc; /* Link color */
+            font-weight: bold; /* Make links bold */
+        }
+
+        /* Main Content Wrapper */
         .content-wrapper {
             margin-left: 300px;          /* Space for sidebar */
-            margin-top: 70px;           /* Space for header */
-            width: calc(100% - 300px);  /* Full remaining width */
-            padding: 20px;              /* Add padding for content */
-            display: flex;              /* Use flexbox */
-            flex-direction: column;     /* Stack content vertically */
-            align-items: flex-start;    /* Left align content */
+            margin-top: 70px;            /* Space for header */
+            width: calc(100% - 300px);   /* Full remaining width */
+            padding: 20px;               /* Add padding for content */
         }
+
+        /* Table of Contents (TOC) Styling */
         .toc {
-            font-size: 16 !important;
+            font-size: 1.8em !important; /* Increased font size */
+            font-weight: bold;           /* Bold text */
             position: fixed;
             right: 20px;
             top: 80px;
-            width: 200px;
-            padding: 5px;
-            text-align: left !important;
+            width: 250px;                /* Increased width */
+            padding: 10px;
+            text-align: left !important; /* Left-aligned text */
+            background-color: #f1f1f1;   /* Optional: TOC background */
+            border-radius: 5px;           /* Optional: Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
         }
+
         .toc__menu {
-            font-size: 16;
+            font-size: 1.8em;         /* Increased font size */
             line-height: 1.5;
-            text-align: left !important;
+            text-align: left !important; /* Left-aligned text */
         }
+
         .toc .nav__title {
-            font-size: 16;
+            font-size: 1.8em;         /* Larger title font */
             padding: 8px 12px;
-            text-align: left !important;
+            text-align: left !important; /* Left-aligned title */
+            border-bottom: 1px solid #ccc; /* Optional: Separator line */
+            margin-bottom: 10px;            /* Space below title */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .sidebar {
+                width: 250px;
+            }
+
+            .content-wrapper {
+                margin-left: 250px;
+                width: calc(100% - 250px);
+            }
+
+            .toc {
+                width: 200px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .content-wrapper {
+                margin-left: 200px;
+                width: calc(100% - 200px);
+            }
+
+            .toc {
+                display: none; /* Hide TOC on small screens */
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header Include -->
     {% include masthead.html %}
+
+    <!-- Sidebar Include -->
     {% include sidebar.html %}
+
+    <!-- Main Content Wrapper -->
     <div class="content-wrapper">
         {{ content }}
     </div>
+
+    <!-- TOC (Assuming TOC is embedded within the content or included elsewhere) -->
+    <!-- If TOC is not included via an include, ensure it's part of the content -->
+    <!-- Example:
+    <div class="toc">
+        <div class="nav__title">Table of Contents</div>
+        <div class="toc__menu">
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <!-- More TOC items -->
+            </ul>
+        </div>
+    </div>
+    -->
 </body>
 </html>
