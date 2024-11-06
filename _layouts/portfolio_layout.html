@@ -139,11 +139,22 @@ layout: none
         .toc a[href*="#"]:before {
             content: attr(href);
             display: inline-block;
-            font-size: 1.2em; /* Adjust as needed */
+            font-size: 3.0em; /* Adjust as needed */
             margin-right: 10px;
         }
 
         .toc a[href*="#"]:hover:before {
+            text-decoration: underline;
+        }
+
+        .toc a[href*="##"]:before {
+            content: attr(href);
+            display: inline-block;
+            font-size: 2.0em; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        .toc a[href*="##"]:hover:before {
             text-decoration: underline;
         }
 
