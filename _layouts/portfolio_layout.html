@@ -1,50 +1,34 @@
 ---
-layout: default
+layout: none
 ---
-
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    {% include head.html %}
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.5.57">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>{{ page.title | default: site.title }}</title>
+    
+    <style>
+        code { white-space: pre-wrap; }
+        span.smallcaps { font-variant: small-caps; }
+        div.columns { display: flex; gap: min(4vw, 1.5em); }
+        div.column { flex: auto; overflow-x: auto; }
+        div.hanging-indent { margin-left: 1.5em; text-indent: -1.5em; }
+        ul.task-list { list-style: none; }
+        ul.task-list li input[type="checkbox"] {
+            width: 0.8em;
+            margin: 0 0.8em 0.2em -1em;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    {% include masthead.html %}
+    {{ content }}
+    {% unless page.hide_footer %}
+        {% include footer.html %}
     {% endunless %}
-
-    <!-- Begin content wrapper -->
-    <div class="content-wrapper">
-      <div class="page-content">
-        {{ content }}
-      </div>
-      {% include toc.html %}
-    </div>
-    <!-- End content wrapper -->
-  </div>
-</div>
-
-<!-- Add custom styles -->
-<style>
-  .content-wrapper {
-    display: flex;
-  }
-
-  .page-content {
-    flex: 1;
-    padding-right: 20px; /* Adjust as needed */
-  }
-
-  .toc {
-    width: 250px; /* Adjust the width as needed */
-    margin-left: 20px; /* Optional spacing */
-    flex-shrink: 0;
-  }
-</style>
+</body>
+</html>
