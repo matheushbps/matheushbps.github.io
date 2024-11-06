@@ -97,8 +97,8 @@ layout: none
             position: fixed;          /* Changed from sticky to fixed */
             top: 70px;
             right: 20px;             /* Position it on the right */
-            width: 400px;                   /* Wider container */
-            padding: 20px;                  /* More padding */
+            width: 500px;            /* Increased width for better readability */
+            padding: 30px;           /* Increased padding */
             text-align: left !important;
             background-color: #f1f1f1;
             border-radius: 5px;
@@ -109,17 +109,20 @@ layout: none
         }
 
         .toc__menu {
-            font-size: 30px !important;     /* Slightly reduced font size */
-            line-height: 1.5;
+            font-size: 24px !important;
+            line-height: 1.6 !important;
             text-align: left !important;
         }
 
         .toc .nav__title {
-            font-size: 30px !important;     /* Slightly reduced font size */
+            font-size: 32px !important;
             padding: 15px;
             text-align: left !important;
             border-bottom: 1px solid #ccc;
             margin-bottom: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         /* Ensure TOC font size is applied */
@@ -203,6 +206,41 @@ layout: none
             font-size: inherit !important;
         }
 
+        /* Specific styles for different heading levels */
+        .toc__menu li > a[href^="#"]:not([href*="##"]):not([href*="###"]):not([href*="####"]) {
+            font-size: 28px !important;
+            font-weight: bold;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .toc__menu li > a[href*="##"]:not([href*="###"]):not([href*="####"]) {
+            font-size: 24px !important;
+            margin: 12px 0;
+            display: block;
+        }
+
+        .toc__menu li > a[href*="###"]:not([href*="####"]) {
+            font-size: 20px !important;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .toc__menu li > a[href*="####"] {
+            font-size: 18px !important;
+            margin: 8px 0;
+            display: block;
+        }
+
+        /* Increased spacing between items */
+        .toc__menu ul {
+            margin-left: 25px !important;
+        }
+
+        .toc__menu li {
+            margin-bottom: 15px !important;
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 1024px) {
             .sidebar {
@@ -215,7 +253,7 @@ layout: none
             }
 
             .toc {
-                width: 200px;
+                width: 350px;
             }
         }
 
@@ -280,6 +318,13 @@ layout: none
 
         .toc li.expanded > ul {
             display: block;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 1200px) {
+            .toc {
+                width: 400px;
+            }
         }
     </style>
 
