@@ -391,7 +391,7 @@ layout: none
             // Initialize TOC
             setupTOC();
 
-            // Updated click handler for smooth scrolling with better title visibility
+            // Updated click handler with better scrolling behavior
             document.querySelectorAll('.toc a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     if (!this.parentElement.classList.contains('has-children')) {
@@ -400,21 +400,27 @@ layout: none
                         const targetElement = document.getElementById(targetId);
 
                         if (targetElement) {
-                            // Calculate position with extra offset for better visibility
-                            const extraOffset = 20; // Adjust this value as needed
+                            // Increased offset for better visibility
+                            const extraOffset = 100; // Increased from 20 to 100 for more space
                             const position = targetElement.getBoundingClientRect().top + window.pageYOffset;
                             
-                            // Smooth scroll to position
+                            // Smooth scroll to position with more space above
                             window.scrollTo({
                                 top: position - (headerHeight + extraOffset),
                                 behavior: 'smooth'
                             });
 
-                            // Highlight the target element temporarily
+                            // Enhanced highlight effect
                             targetElement.style.transition = 'background-color 0.5s';
                             targetElement.style.backgroundColor = '#fff3cd';
+                            targetElement.style.padding = '15px';
+                            targetElement.style.marginTop = '20px';
+                            
+                            // Remove highlight after delay
                             setTimeout(() => {
                                 targetElement.style.backgroundColor = '';
+                                targetElement.style.padding = '';
+                                targetElement.style.marginTop = '';
                             }, 2000);
                         }
                     }
@@ -439,20 +445,6 @@ layout: none
     <!-- Main Content Wrapper -->
     <div class="content-wrapper">
         {{ content }}
-    </div>
-
-    <!-- TOC (Assuming TOC is embedded within the content or included elsewhere) -->
-    <!-- If TOC is not included via an include, ensure it's part of the content -->
-    <!-- Example:
-    <div class="toc">
-        <div class="nav__title">Table of Contents</div>
-        <div class="toc__menu">
-            <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <!-- More TOC items -->
-            </ul>
-        </div>
     </div>
 </body>
 </html>
