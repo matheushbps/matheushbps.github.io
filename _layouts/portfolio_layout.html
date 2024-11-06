@@ -1,7 +1,9 @@
-<!-- _layouts/portfolio_layout.html -->
 ---
-layout: default
+layout: single
+classes: wide
 ---
+
+{% include masthead.html %}
 
 <div id="main" class="layout--single">
   {% if page.author_profile or layout.author_profile or site.author_profile %}
@@ -18,16 +20,47 @@ layout: default
 </div>
 
 <style>
-.layout--single .page__content {
+.page__content {
   float: right;
   width: calc(100% - 300px);
   padding-right: 0;
   margin-right: 0;
 }
 
+.masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 300px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+#main {
+  margin-top: 70px;
+}
+
+.toc {
+  position: sticky;
+  top: 80px;
+  right: 0;
+  z-index: 99;
+}
+
 @media screen and (max-width: 1024px) {
-  .layout--single .page__content {
+  .page__content {
     width: calc(100% - 250px);
+  }
+  
+  .sidebar {
+    width: 250px;
   }
 }
 </style>
