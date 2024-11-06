@@ -203,19 +203,19 @@ layout: none
 
         /* Base TOC styles for different heading levels */
         .toc a[href^="#"]:not([href*="##"]):not([href*="###"]):not([href*="####"]) {
-            font-size: 40px !important; /* Top level headers (#) */
+            font-size: 60px !important; /* Increased from 40px */
         }
 
         .toc a[href*="##"]:not([href*="###"]):not([href*="####"]) {
-            font-size: 35px !important; /* Second level headers (##) */
+            font-size: 50px !important; /* Increased from 35px */
         }
 
         .toc a[href*="###"]:not([href*="####"]) {
-            font-size: 30px !important; /* Third level headers (###) */
+            font-size: 40px !important; /* Increased from 30px */
         }
 
         .toc a[href*="####"] {
-            font-size: 25px !important; /* Fourth level headers (####) */
+            font-size: 30px !important; /* Increased from 25px */
         }
 
         /* Override previous all-encompassing font-size rules */
@@ -225,27 +225,27 @@ layout: none
 
         /* Specific styles for different heading levels */
         .toc__menu li > a[href^="#"]:not([href*="##"]):not([href*="###"]):not([href*="####"]) {
-            font-size: 28px !important;
+            font-size: 48px !important; /* Increased from 28px */
             font-weight: bold;
-            margin: 15px 0;
+            margin: 20px 0; /* Increased margin */
             display: block;
         }
 
         .toc__menu li > a[href*="##"]:not([href*="###"]):not([href*="####"]) {
-            font-size: 24px !important;
-            margin: 12px 0;
+            font-size: 40px !important; /* Increased from 24px */
+            margin: 16px 0;
             display: block;
         }
 
         .toc__menu li > a[href*="###"]:not([href*="####"]) {
-            font-size: 20px !important;
-            margin: 10px 0;
+            font-size: 32px !important; /* Increased from 20px */
+            margin: 14px 0;
             display: block;
         }
 
         .toc__menu li > a[href*="####"] {
-            font-size: 18px !important;
-            margin: 8px 0;
+            font-size: 24px !important; /* Increased from 18px */
+            margin: 12px 0;
             display: block;
         }
 
@@ -255,7 +255,7 @@ layout: none
         }
 
         .toc__menu li {
-            margin-bottom: 15px !important;
+            margin-bottom: 25px !important; /* Increased from 15px */
         }
 
         /* Responsive Design */
@@ -343,6 +343,21 @@ layout: none
                 width: 400px;
             }
         }
+
+        /* Update TOC Styling to ensure it's completely fixed */
+        .toc {
+            position: fixed !important;  /* Force fixed position */
+            top: 70px !important;       /* Align with header */
+            right: 20px;
+            width: 500px;
+            height: calc(100vh - 90px);
+            overflow-y: auto;
+            z-index: 999;
+            background-color: #f1f1f1;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
     <script>
@@ -368,7 +383,7 @@ layout: none
             // Initialize TOC
             setupTOC();
 
-            // Existing click handler for smooth scrolling
+            // Updated click handler for smooth scrolling with better title visibility
             document.querySelectorAll('.toc a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     if (!this.parentElement.classList.contains('has-children')) {
@@ -377,11 +392,22 @@ layout: none
                         const targetElement = document.getElementById(targetId);
 
                         if (targetElement) {
+                            // Calculate position with extra offset for better visibility
+                            const extraOffset = 100; // Adjust this value as needed
                             const position = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                            
+                            // Smooth scroll to position
                             window.scrollTo({
-                                top: position - (headerHeight + 10),
+                                top: position - (headerHeight + extraOffset),
                                 behavior: 'smooth'
                             });
+
+                            // Highlight the target element temporarily
+                            targetElement.style.transition = 'background-color 0.5s';
+                            targetElement.style.backgroundColor = '#fff3cd';
+                            setTimeout(() => {
+                                targetElement.style.backgroundColor = '';
+                            }, 2000);
                         }
                     }
                 });
