@@ -8,87 +8,43 @@ layout: default
 
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
-    <style>
-        .portfolio__content {
-            position: fixed !important;
-            right: 20px !important;
-            top: 80px !important;
-            width: 300px !important;
-        }
-    </style>
     {% include breadcrumbs.html %}
   {% endunless %}
 {% endif %}
 
 <div id="main" role="main">
-{% if page.url != "/" and site.breadcrumbs %}
-    {% unless paginator %}
-        <style>
-                .portfolio__content {
-                        position: fixed !important;
-                        right: 20px !important;
-                        top: 80px !important;
-                        width: 400px !important;
-                }
-
-                .toc {
-                        font-size: 1em !important;
-                        padding: 20px !important;
-                        background: rgba(235, 245, 255, 0.95) !important;
-                }
-
-                .toc__menu {
-                        font-size: 1.1em !important;
-                        line-height: 1.8 !important;
-                        padding: 10px !important;
-                }
-
-                .toc .nav__title {
-                        font-size: 1.2em !important;
-                        padding: 10px 15px !important;
-                }
-        </style>
-        {% include breadcrumbs.html %}
-    {% endunless %}
-{% endif %}
   {% include sidebar.html %}
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
-    {{ content }}
+
+    <!-- Begin content wrapper -->
+    <div class="content-wrapper">
+      <div class="page-content">
+        {{ content }}
+      </div>
+      {% include toc.html %}
+    </div>
+    <!-- End content wrapper -->
   </div>
-<style>
-    .portfolio__content {
-        position: fixed !important;
-        right: 10px !important;
-        top: 80px !important;
-        width: 350px !important;
-    }
-
-    .archive {
-        margin-right: 360px !important;
-        padding-right: 10px !important;
-        width: calc(100% - 360px) !important;
-    }
-
-    .toc__menu {
-        font-size: 1.1em !important;
-        line-height: 1.8 !important;
-        padding: 8px !important;
-    }
-
-    .toc .nav__title {
-        font-size: 1.2em !important;
-        padding: 8px 10px !important;
-    }
-
-    @media screen and (max-width: 1024px) {
-        .archive {
-            margin-right: 300px !important;
-            width: calc(100% - 300px) !important;
-        }
-    }
-</style>
 </div>
+
+<!-- Add custom styles -->
+<style>
+  .content-wrapper {
+    display: flex;
+  }
+
+  .page-content {
+    flex: 1;
+    padding-right: 20px; /* Adjust as needed */
+  }
+
+  .toc {
+    width: 250px; /* Adjust the width as needed */
+    margin-left: 20px; /* Optional spacing */
+    flex-shrink: 0;
+  }
+</style>
