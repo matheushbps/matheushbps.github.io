@@ -1,34 +1,38 @@
 ---
-layout: default
+layout: none
 ---
-
-<div class="content-wrapper">
-  {% include sidebar.html %}
-  
-  <div class="page__content">
-    <div class="portfolio-content">
-      {{ content }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+    <style>
+        .masthead {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 70px;
+            width: 300px;
+            height: calc(100vh - 70px);
+        }
+        .content-wrapper {
+            margin-left: 300px;
+            margin-top: 70px;
+            width: calc(100% - 300px);
+        }
+    </style>
+</head>
+<body>
+    {% include masthead.html %}
+    {% include sidebar.html %}
+    <div class="content-wrapper">
+        {{ content }}
     </div>
-  </div>
-  
-  {% if page.toc %}
-    {% include toc.html %}
-  {% endif %}
-</div>
-
-<style>
-.content-wrapper {
-  display: flex;
-  margin-top: 70px;
-}
-
-.page__content {
-  margin-left: 300px;
-  width: calc(100% - 300px);
-  padding: 20px;
-}
-
-.portfolio-content {
-  width: 100%;
-}
-</style>
+</body>
+</html>
