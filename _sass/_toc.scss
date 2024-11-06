@@ -53,18 +53,6 @@
     }
 
     @media screen and (max-width: 768px) {
-        width: 100px !important;
-        
-        ~ .page__content {
-            margin-right: 120px !important;
-        }
-        
-        &.is-hidden {
-            transform: translateX(120px) !important;
-            
-            ~ .page__content {
-                margin-right: 0 !important;
-            }
-        }
+        display: none !important;
     }
 }
