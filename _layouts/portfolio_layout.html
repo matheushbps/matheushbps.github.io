@@ -95,10 +95,10 @@ layout: none
         .toc {
             font-size: 30px !important;     /* Slightly reduced font size */
             font-weight: bold;
-            position: fixed;          /* Changed from sticky to fixed */
-            top: 70px; /* Align with content, just below header */
-            right: 20px;             /* Position it on the right */
-            width: 500px;            /* Increased width for better readability */
+            position: fixed !important;          /* Changed from sticky to fixed */
+            top: 70px !important; /* Align with content, just below header */
+            right: 20px !important;             /* Position it on the right */
+            width: 500px !important;            /* Increased width for better readability */
             padding: 30px;           /* Increased padding */
             text-align: left !important;
             background-color: #f1f1f1;
@@ -106,7 +106,7 @@ layout: none
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow-y: auto;               /* Enable scrolling */
             max-height: calc(100vh - 90px); /* Prevent overflow */
-            z-index: 999; /* Ensure it stays above content but below header */
+            z-index: 999 !important; /* Ensure it stays above content but below header */
         }
 
         /* Increase TOC font sizes */
