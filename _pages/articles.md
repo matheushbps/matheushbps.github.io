@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 permalink: /articles/
 author_profile: true
 redirect_from:
