@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 permalink: /recommendations/
 author_profile: true
 redirect_from:
