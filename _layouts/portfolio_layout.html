@@ -91,7 +91,7 @@ layout: none
 
         /* Table of Contents (TOC) Styling */
         .toc {
-            font-size: 40px !important;     /* Increased font size using px */
+            font-size: 30px !important;     /* Slightly reduced font size */
             font-weight: bold;
             position: fixed;
             right: 20px;
@@ -107,13 +107,13 @@ layout: none
         }
 
         .toc__menu {
-            font-size: 40px !important;     /* Increased font size using px */
+            font-size: 30px !important;     /* Slightly reduced font size */
             line-height: 1.5;
             text-align: left !important;
         }
 
         .toc .nav__title {
-            font-size: 40px !important;     /* Increased font size using px */
+            font-size: 30px !important;     /* Slightly reduced font size */
             padding: 15px;
             text-align: left !important;
             border-bottom: 1px solid #ccc;
@@ -122,16 +122,28 @@ layout: none
 
         /* Ensure TOC font size is applied */
         .toc, .toc * {
-            font-size: 40px !important;
+            font-size: 30px !important;
         }
 
         .toc ul, .toc li, .toc a {
-            font-size: 40px !important;
+            font-size: 30px !important;
         }
 
         /* Additional specificity */
         .toc ul li a {
-            font-size: 40px !important;
+            font-size: 30px !important;
+        }
+
+        /* Increase size of headings in TOC */
+        .toc a[href*="#"]:before {
+            content: attr(href);
+            display: inline-block;
+            font-size: 1.2em; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        .toc a[href*="#"]:hover:before {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -207,6 +219,12 @@ layout: none
                         });
                     }
                 });
+            });
+
+            // Apply inline styles to TOC elements
+            const tocElements = document.querySelectorAll('.toc, .toc *, .toc ul, .toc li, .toc a, .toc ul li a');
+            tocElements.forEach(element => {
+                element.style.fontSize = '40px';
             });
         });
     </script>
