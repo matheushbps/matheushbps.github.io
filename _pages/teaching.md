@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: talk
 permalink: /teaching/
 author_profile: true
 redirect_from:

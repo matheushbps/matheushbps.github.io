@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: splash
 permalink: /recommendations/
 author_profile: true
 redirect_from:
