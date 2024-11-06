@@ -1,81 +1,32 @@
 ---
-layout: default
+layout: archive
 ---
 
-<div class="masthead">
-  {% include masthead.html %}
-</div>
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
 
-<div class="wrapper">
-  {% if page.author_profile or layout.author_profile or site.author_profile %}
-    <div class="sidebar sticky">
-      {% include sidebar.html %}
-    </div>
-  {% endif %}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    <style>
+        .portfolio__content {
+            position: fixed !important;
+            right: 20px !important;
+            top: 80px !important;
+            width: 300px !important;
+        }
+    </style>
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
 
-  <div class="page__content-wrapper">
-    {% include toc %}
-    
-    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-      <div class="page__inner-wrap">
-        <div class="page__content" itemprop="text">
-          {{ content }}
-        </div>
-      </div>
-    </article>
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
   </div>
 </div>
-
-<style>
-.wrapper {
-  display: flex;
-  margin-top: 70px;
-}
-
-.masthead {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: white;
-}
-
-.sidebar.sticky {
-  position: fixed;
-  left: 0;
-  top: 70px;
-  width: 300px;
-  height: calc(100vh - 70px);
-  overflow-y: auto;
-}
-
-.page__content-wrapper {
-  margin-left: 300px;
-  width: calc(100% - 300px);
-  padding: 20px;
-}
-
-.page__content {
-  width: 100%;
-}
-
-.toc {
-  position: sticky;
-  top: 80px;
-  right: 20px;
-  width: 200px;
-  z-index: 99;
-}
-
-@media screen and (max-width: 1024px) {
-  .sidebar.sticky {
-    width: 250px;
-  }
-  
-  .page__content-wrapper {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-  }
-}
-</style>
