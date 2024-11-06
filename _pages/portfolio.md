@@ -9,16 +9,20 @@ author_profile: true
 {% include toc %}
 
 
-# Project 1
-[Project 1](https://matheushbps.github.io/portfolio/portfolio-1/)
-<img src='/images/car.jpeg'>
+# Language Models Projects
+
+## Applying Transformers Language Models in Customer Reviews
+[Available here](https://matheushbps.github.io/portfolio/portfolio-1/)
+
+![alt text](images/car.jpg)
 
 This project was done to showcase the usage of the Transformer Language Models and their comprehensive usage nowadays. These kind of models can be used (as shown in the project) for text classification, text translation, question an answer and text translation, features that can be invaluable in a world where the Communication (especially in business like Customer Service) is a decisive strategy point.
 
 
 # Project 2
+
 [Project 2](https://matheushbps.github.io/portfolio/portfolio-2/)
 
-<img src='/_pages/mh_.png'>
+![alt text](_pages/mh_.png)
 
 Just a test
