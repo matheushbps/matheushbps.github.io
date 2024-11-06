@@ -87,6 +87,7 @@ layout: none
             margin-top: 70px;            /* Space for header */
             width: calc(100% - 300px);   /* Full remaining width */
             padding: 20px;               /* Add padding for content */
+            position: relative;          /* Ensure proper positioning */
         }
 
         /* Table of Contents (TOC) Styling */
@@ -95,15 +96,15 @@ layout: none
             font-weight: bold;
             position: fixed;
             right: 20px;
-            top: 80px;
-            width: 400px;                    /* Wider container */
-            padding: 20px;                   /* More padding */
+            top: 70px;                      /* Adjust top to match header height */
+            width: 400px;                   /* Wider container */
+            padding: 20px;                  /* More padding */
             text-align: left !important;
             background-color: #f1f1f1;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;                /* Enable scrolling */
-            max-height: calc(100vh - 100px); /* Prevent overflow */
+            overflow-y: auto;               /* Enable scrolling */
+            max-height: calc(100vh - 90px); /* Prevent overflow */
         }
 
         .toc__menu {
