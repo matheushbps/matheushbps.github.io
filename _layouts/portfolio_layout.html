@@ -28,15 +28,19 @@ layout: none
         }
         .author__content {
             text-align: left;
-            padding: 70px;
+            padding: 15px;
         }
         .content-wrapper {
-            margin-left: 300px;
-            margin-top: 70px;
-            width: calc(100% - 300px);
+            margin-left: 300px;          /* Space for sidebar */
+            margin-top: 70px;           /* Space for header */
+            width: calc(100% - 300px);  /* Full remaining width */
+            padding: 20px;              /* Add padding for content */
+            display: flex;              /* Use flexbox */
+            flex-direction: column;     /* Stack content vertically */
+            align-items: flex-start;    /* Left align content */
         }
         .toc {
-            font-size: 10.0em !important;
+            font-size: 16 !important;
             position: fixed;
             right: 20px;
             top: 80px;
@@ -45,12 +49,12 @@ layout: none
             text-align: left !important;
         }
         .toc__menu {
-            font-size: 10.0em;
+            font-size: 16;
             line-height: 1.5;
             text-align: left !important;
         }
         .toc .nav__title {
-            font-size: 10.0em;
+            font-size: 16;
             padding: 8px 12px;
             text-align: left !important;
         }
