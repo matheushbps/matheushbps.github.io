@@ -256,30 +256,76 @@ layout: none
                 z-index: 1000 !important;
             }
         }
+
+        /* Add these new TOC styles */
+        .toc ul ul {
+            display: none; /* Hide submenus by default */
+            margin-left: 20px;
+        }
+
+        .toc li {
+            position: relative;
+        }
+
+        .toc li.has-children > a:after {
+            content: '+';
+            position: absolute;
+            right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .toc li.has-children.expanded > a:after {
+            content: '-';
+        }
+
+        .toc li.expanded > ul {
+            display: block;
+        }
     </style>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const headerHeight = document.querySelector('.masthead').offsetHeight;
 
+            // Add collapsible functionality
+            function setupTOC() {
+                const tocItems = document.querySelectorAll('.toc li');
+                
+                tocItems.forEach(item => {
+                    if (item.querySelector('ul')) {
+                        item.classList.add('has-children');
+                        
+                        item.querySelector('a').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            item.classList.toggle('expanded');
+                        });
+                    }
+                });
+            }
+
+            // Initialize TOC
+            setupTOC();
+
+            // Existing click handler for smooth scrolling
             document.querySelectorAll('.toc a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
+                    if (!this.parentElement.classList.contains('has-children')) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
 
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-
-                    if (targetElement) {
-                        // Calculate position to show full header
-                        const position = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                        window.scrollTo({
-                            top: position - (headerHeight + 10), // Added small offset for better visibility
-                            behavior: 'smooth'
-                        });
+                        if (targetElement) {
+                            const position = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({
+                                top: position - (headerHeight + 10),
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 });
             });
 
-            // Apply inline styles to TOC elements
+            // Existing TOC font size setup
             const tocElements = document.querySelectorAll('.toc, .toc *, .toc ul, .toc li, .toc a, .toc ul li a');
             tocElements.forEach(element => {
                 element.style.fontSize = '40px';
