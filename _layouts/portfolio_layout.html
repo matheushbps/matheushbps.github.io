@@ -91,7 +91,7 @@ layout: none
 
         /* Table of Contents (TOC) Styling */
         .toc {
-            font-size: 3em !important;     /* Abruptly increased font size */
+            font-size: 40px !important;     /* Increased font size using px */
             font-weight: bold;
             position: fixed;
             right: 20px;
@@ -107,13 +107,13 @@ layout: none
         }
 
         .toc__menu {
-            font-size: 3em !important;     /* Abruptly increased font size */
+            font-size: 40px !important;     /* Increased font size using px */
             line-height: 1.5;
             text-align: left !important;
         }
 
         .toc .nav__title {
-            font-size: 3em !important;     /* Abruptly increased font size */
+            font-size: 40px !important;     /* Increased font size using px */
             padding: 15px;
             text-align: left !important;
             border-bottom: 1px solid #ccc;
@@ -122,16 +122,16 @@ layout: none
 
         /* Ensure TOC font size is applied */
         .toc, .toc * {
-            font-size: 3em !important;
+            font-size: 40px !important;
         }
 
         .toc ul, .toc li, .toc a {
-            font-size: 3em !important;
+            font-size: 40px !important;
         }
 
         /* Additional specificity */
         .toc ul li a {
-            font-size: 3em !important;
+            font-size: 40px !important;
         }
 
         /* Responsive Design */
@@ -189,6 +189,27 @@ layout: none
             }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const headerHeight = document.querySelector('.masthead').offsetHeight;
+
+            document.querySelectorAll('.toc a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - headerHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Header Include -->
