@@ -4,33 +4,14 @@ layout: none
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-    <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
-    <style>
-        /* Header Styling */
-        .masthead {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: #fff; /* Ensure header has a background */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-            }
-        </style>
-
-    
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
     <!-- Header Include -->
     {% include masthead.html %}
-
-    <!-- Main Content Wrapper -->
-    <div class="content-wrapper">
-        {{ content }}
-    </div>
+    
+    {{ content }}
 </body>
 </html>
