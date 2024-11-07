@@ -9,7 +9,7 @@ layout: none
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-    <!-- Header Include -->
     {% include masthead.html %}
+    {% raw %}{{ content }}{% endraw %}
 </body>
 </html>
