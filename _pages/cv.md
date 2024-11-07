@@ -24,7 +24,7 @@ redirect_from:
 **I'm searching for remote spots in a data driven company where I can apply my Data Science, NLP, LLM and data analysis skills to help
 improve a data driven guided by strong and complex analysis, with powerful results.**
 
-If you're interested in knowing a little more about me, please check my Cover Letter: [Cover Letter](https://matheushbps.github.io/files/MHCL.pdf)
+If you're interested in knowing a little more about me, please check my Cover Letter: [Cover Letter](https://matheushbps.github.io/files/MH CL 2024_11.pdf)
 
 If you want to refer to my PDF CV, it's available at the following:
 [Matheus' CV](https://matheushbps.github.io/files/CV Matheus HBPS 2024.pdf)
