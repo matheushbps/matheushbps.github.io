@@ -419,6 +419,42 @@ layout: none
         .toc-home a:hover {
             background-color: #e9ecef !important;
         }
+
+        /* Unified sidebar list styling */
+        .sidebar ul.author__urls {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .sidebar ul.author__urls li {
+            display: flex !important;
+            align-items: center !important;
+            margin-bottom: 8px !important;
+            padding: 0 !important;
+        }
+
+        .sidebar ul.author__urls li i,
+        .sidebar ul.author__urls li .fa-fw {
+            width: 20px !important;
+            min-width: 20px !important;
+            text-align: center !important;
+            margin-right: 10px !important;
+        }
+
+        .sidebar ul.author__urls li a,
+        .sidebar ul.author__urls li span {
+            display: inline-flex !important;
+            align-items: center !important;
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* Force left alignment for all items */
+        .sidebar ul.author__urls li * {
+            text-align: left !important;
+            justify-content: flex-start !important;
+        }
     </style>
 
     <script>
