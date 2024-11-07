@@ -73,11 +73,13 @@
     background: rgba(235, 245, 255, 0.9) !important;
     border: none !important;
     border-left: 3px solid #89CFF0 !important;
-    padding: 8px !important;
+    padding: 6px 12px !important;
     cursor: pointer !important;
     z-index: 101 !important; // Increased z-index
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important; // Ensure it's clickable
+    font-size: 0.8em !important;
+    opacity: 1 !important;
     
     &:hover {
         opacity: 0.8 !important;
@@ -85,5 +87,6 @@
 
     &.show {
         display: block !important;
+        opacity: 1 !important;
     }
 }

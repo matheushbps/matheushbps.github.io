@@ -15,31 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create show button
         const showButton = document.createElement('button');
         showButton.className = 'toc-show-button';
-        showButton.innerHTML = '☰ Show TOC';
+        showButton.innerHTML = 'Show table of contents';
         document.body.appendChild(showButton);
 
         // Toggle function
         function toggleTOC(show) {
-            const isHidden = show === undefined ? toc.classList.contains('is-hidden') : !show;
-            toc.classList.toggle('is-hidden', !isHidden);
-            showButton.classList.toggle('show', !isHidden);
+            toc.classList.toggle('is-hidden', !show);
+            showButton.classList.toggle('show', !show);
             
             if (mainContent) {
-                mainContent.style.marginRight = isHidden ? '270px' : '0';
+                mainContent.style.marginRight = show ? '270px' : '0';
             }
-            toggleButton.setAttribute('aria-expanded', isHidden);
-            toggleButton.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+            toggleButton.setAttribute('aria-expanded', show);
+            toggleButton.style.transform = show ? 'rotate(0deg)' : 'rotate(180deg)';
         }
 
         // Add click handlers
         toggleButton.addEventListener('click', () => {
-            toggleTOC();
-            showButton.classList.toggle('show', true);
+            toggleTOC(false);
         });
         
         showButton.addEventListener('click', () => {
             toggleTOC(true);
-            showButton.classList.toggle('show', false);
         });
 
         // Add keyboard support
