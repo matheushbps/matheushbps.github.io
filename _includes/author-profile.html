@@ -24,19 +24,49 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
+      <style>
+        .icon-container {
+          display: flex;
+          align-items: center;
+        }
+        .icon-wrapper {
+          width: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .text-wrapper {
+          flex: 1;
+        }
+      </style>
       {% if author.location %}
         <li class="author__desktop">
-          <img src="/images/brazil-flag.png" alt="Location" style="width: 20px; height: 20px; margin-right: 8px; display: inline-block; vertical-align: text-bottom;">{{ author.location }}
+          <div class="icon-container">
+            <div class="icon-wrapper">
+              <img src="/images/brazil-flag.png" alt="Location" style="width: 20px; height: 20px;">
+            </div>
+            <div class="text-wrapper">{{ author.location }}</div>
+          </div>
         </li>
       {% endif %}
       {% if author.employer %}
         <li class="author__desktop">
-          <img src="/images/turing.png" alt="Employer" style="width: 20px; height: 20px; margin-right: 8px; display: inline-block; vertical-align: text-bottom;">{{ author.employer }}
+          <div class="icon-container">
+            <div class="icon-wrapper">
+              <img src="/images/turing.png" alt="Employer" style="width: 20px; height: 20px;">
+            </div>
+            <div class="text-wrapper">{{ author.employer }}</div>
+          </div>
         </li>
       {% endif %}
       {% if author.scholarship %}
         <li>
-          <img src="/images/usp.png" alt="Education" style="width: 20px; height: 20px; margin-right: 8px; display: inline-block; vertical-align: text-bottom;">{{ author.scholarship }}
+          <div class="icon-container">
+            <div class="icon-wrapper">
+              <img src="/images/usp.png" alt="Education" style="width: 20px; height: 20px;">
+            </div>
+            <div class="text-wrapper">{{ author.scholarship }}</div>
+          </div>
         </li>
       {% endif %}
       {% if author.uri %}
