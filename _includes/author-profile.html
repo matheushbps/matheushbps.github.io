@@ -28,44 +28,38 @@
         .icon-container {
           display: flex;
           align-items: center;
+          padding-left: 0;
         }
-        .icon-wrapper {
-          width: 28px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .icon-img {
+          width: 20px;
+          height: 20px;
+          min-width: 20px; /* Prevents icon from shrinking */
         }
         .text-wrapper {
-          flex: 1;
+          margin-left: 8px;
         }
       </style>
       {% if author.location %}
         <li class="author__desktop">
           <div class="icon-container">
-            <div class="icon-wrapper">
-              <img src="/images/brazil-flag.png" alt="Location" style="width: 20px; height: 20px;">
-            </div>
-            <div class="text-wrapper">{{ author.location }}</div>
+            <img src="/images/brazil-flag.png" alt="Location" class="icon-img">
+            <span class="text-wrapper">{{ author.location }}</span>
           </div>
         </li>
       {% endif %}
       {% if author.employer %}
         <li class="author__desktop">
           <div class="icon-container">
-            <div class="icon-wrapper">
-              <img src="/images/turing.png" alt="Employer" style="width: 20px; height: 20px;">
-            </div>
-            <div class="text-wrapper">{{ author.employer }}</div>
+            <img src="/images/turing.png" alt="Employer" class="icon-img">
+            <span class="text-wrapper">{{ author.employer }}</span>
           </div>
         </li>
       {% endif %}
       {% if author.scholarship %}
         <li>
           <div class="icon-container">
-            <div class="icon-wrapper">
-              <img src="/images/usp.png" alt="Education" style="width: 20px; height: 20px;">
-            </div>
-            <div class="text-wrapper">{{ author.scholarship }}</div>
+            <img src="/images/usp.png" alt="Education" class="icon-img">
+            <span class="text-wrapper">{{ author.scholarship }}</span>
           </div>
         </li>
       {% endif %}
