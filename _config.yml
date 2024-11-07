@@ -30,6 +30,7 @@ author:
   scholarship      : "MSC/MBA Data Science USP"
   uri              : 
   email            : "matheushbps@gmail.com" 
+  phone            : "+55 34 99793-4924"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -44,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/matheushbps"
+  github           : "matheushbps"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -58,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/matheushbps/"
+  linkedin         : "matheushbps"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
