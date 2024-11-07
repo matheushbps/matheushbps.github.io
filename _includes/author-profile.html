@@ -25,43 +25,33 @@
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       <style>
-        .icon-container {
+        .author__urls li {
           display: flex;
           align-items: center;
-          padding-left: 0;
         }
-        .icon-img {
+        .author__urls img,
+        .author__urls i {
           width: 20px;
           height: 20px;
-          min-width: 20px; /* Prevents icon from shrinking */
+          min-width: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 8px;
         }
-        .text-wrapper {
-          margin-left: 8px;
+        .author__urls a,
+        .author__urls span {
+          margin-left: 0;
         }
       </style>
       {% if author.location %}
-        <li class="author__desktop">
-          <div class="icon-container">
-            <img src="/images/brazil-flag.png" alt="Location" class="icon-img">
-            <span class="text-wrapper">{{ author.location }}</span>
-          </div>
-        </li>
+        <li><img src="/images/brazil-flag.png" alt="Location"><span>{{ author.location }}</span></li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop">
-          <div class="icon-container">
-            <img src="/images/turing.png" alt="Employer" class="icon-img">
-            <span class="text-wrapper">{{ author.employer }}</span>
-          </div>
-        </li>
+        <li><img src="/images/turing.png" alt="Employer"><span>{{ author.employer }}</span></li>
       {% endif %}
       {% if author.scholarship %}
-        <li>
-          <div class="icon-container">
-            <img src="/images/usp.png" alt="Education" class="icon-img">
-            <span class="text-wrapper">{{ author.scholarship }}</span>
-          </div>
-        </li>
+        <li><img src="/images/usp.png" alt="Education"><span>{{ author.scholarship }}</span></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
