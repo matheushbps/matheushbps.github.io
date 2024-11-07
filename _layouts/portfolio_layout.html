@@ -373,6 +373,29 @@ layout: none
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        /* Add Home link styling */
+        .toc-home {
+            margin-top: 40px !important;
+            padding-top: 20px !important;
+            border-top: 2px solid #ddd !important;
+            font-size: 36px !important;
+        }
+
+        .toc-home a {
+            color: #007acc !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            display: block !important;
+            padding: 10px 15px !important;
+            background-color: #f8f9fa !important;
+            border-radius: 5px !important;
+            transition: background-color 0.3s ease !important;
+        }
+
+        .toc-home a:hover {
+            background-color: #e9ecef !important;
+        }
     </style>
 
     <script>
@@ -439,6 +462,15 @@ layout: none
             tocElements.forEach(element => {
                 element.style.fontSize = '40px';
             });
+
+            // Add home link to TOC
+            const toc = document.querySelector('.toc');
+            if (toc) {
+                const homeDiv = document.createElement('div');
+                homeDiv.className = 'toc-home';
+                homeDiv.innerHTML = '<a href="#" onclick="window.scrollTo({top: 0, behavior: \'smooth\'}); return false;">⌂ Back to Top</a>';
+                toc.appendChild(homeDiv);
+            }
         });
     </script>
 </head>
