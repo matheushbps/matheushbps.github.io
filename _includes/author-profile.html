@@ -25,13 +25,13 @@
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }} <img src="/images/brazil-flag.png" alt="Brazil flag" style="height: 16px; vertical-align: middle;"></li>
+        <li class="author__desktop"><img src="/images/brazil-flag.png" alt="Location" style="height: 16px; vertical-align: middle;" class="icon-pad-right">{{ author.location }}</li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }} <img src="/images/turing.png" alt="Turing" style="height: 16px; vertical-align: middle;"></li>
+        <li class="author__desktop"><img src="/images/turing.png" alt="Employer" style="height: 16px; vertical-align: middle;" class="icon-pad-right">{{ author.employer }}</li>
       {% endif %}
       {% if author.scholarship %}
-        <li><i class="fa fa-fw fa-graduation-cap" aria-hidden="true"></i> {{ author.scholarship }}</li>
+        <li><img src="/images/usp.png" alt="Education" style="height: 16px; vertical-align: middle;" class="icon-pad-right">{{ author.scholarship }}</li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
