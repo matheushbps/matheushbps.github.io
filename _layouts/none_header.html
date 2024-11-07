@@ -1,9 +1,12 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post Title</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <style>
         /* Reset and base styles */
         * {
@@ -21,9 +24,11 @@
 
         /* Container */
         .container {
-            max-width: 700px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header */
@@ -126,39 +131,11 @@
     </style>
 </head>
 <body>
+    <!-- Header Include -->
+    {% include masthead.html %}
+    
     <div class="container">
-        <header class="header">
-            <h1 class="title">Your Article Title Goes Here</h1>
-            <div class="author-info">
-                <img src="author-avatar.jpg" alt="Author Name" class="author-avatar">
-                <div>
-                    <div class="author-name">Author Name</div>
-                    <div class="post-meta">
-                        <span>Dec 15, 2023</span>
-                        <span>·</span>
-                        <span>5 min read</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <article class="content">
-            <!-- Your content goes here -->
-            <p>Your introduction paragraph goes here...</p>
-            
-            <h2>Section Heading</h2>
-            <p>Section content goes here...</p>
-
-            <pre><code>// Your code block goes here
-function example() {
-    return "Hello World";
-}</code></pre>
-        </article>
-
-        <div class="social-share">
-            <a href="#" class="share-button">Share on Twitter</a>
-            <a href="#" class="share-button">Share on LinkedIn</a>
-        </div>
+        {{ content }}
     </div>
 </body>
 </html>
