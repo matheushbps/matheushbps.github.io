@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         function toggleTOC(show) {
             const isHidden = show === undefined ? toc.classList.contains('is-hidden') : !show;
             toc.classList.toggle('is-hidden', !isHidden);
+            showButton.classList.toggle('show', !isHidden);
+            
             if (mainContent) {
                 mainContent.style.marginRight = isHidden ? '270px' : '0';
             }
@@ -30,8 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Add click handlers
-        toggleButton.addEventListener('click', () => toggleTOC());
-        showButton.addEventListener('click', () => toggleTOC(true));
+        toggleButton.addEventListener('click', () => {
+            toggleTOC();
+            showButton.classList.toggle('show', true);
+        });
+        
+        showButton.addEventListener('click', () => {
+            toggleTOC(true);
+            showButton.classList.toggle('show', false);
+        });
 
         // Add keyboard support
         toggleButton.addEventListener('keypress', function(e) {

@@ -75,10 +75,15 @@
     border-left: 3px solid #89CFF0 !important;
     padding: 8px !important;
     cursor: pointer !important;
-    z-index: 99 !important;
+    z-index: 101 !important; // Increased z-index
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1) !important;
+    pointer-events: auto !important; // Ensure it's clickable
     
     &:hover {
         opacity: 0.8 !important;
+    }
+
+    &.show {
+        display: block !important;
     }
 }
