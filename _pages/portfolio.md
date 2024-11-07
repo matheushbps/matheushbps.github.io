@@ -18,10 +18,3 @@ This project was done to showcase the usage of the Transformer Language Models a
 
 [![Customer Reviews Project](../images/car.jpeg)](https://matheushbps.github.io/portfolio/transformers_and_language_models/)
 
-# Project 2
-
-[Project 2](https://matheushbps.github.io/portfolio/portfolio-2/)
-
-![alt text](_pages/mh_.png)
-
-Just a test
