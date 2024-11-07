@@ -26,22 +26,36 @@
       <!-- Font Awesome icons / Biographic information  -->
       <style>
         .author__urls li {
-          display: flex;
-          align-items: center;
+          display: flex !important;
+          align-items: center !important;
+          white-space: nowrap;
+          margin-bottom: 4px;
         }
         .author__urls img,
-        .author__urls i {
-          width: 20px;
-          height: 20px;
-          min-width: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: 8px;
+        .author__urls i,
+        .author__urls .fa-fw {
+          width: 20px !important;
+          height: 20px !important;
+          min-width: 20px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          margin-right: 8px !important;
+          font-size: 14px !important;
         }
         .author__urls a,
         .author__urls span {
-          margin-left: 0;
+          margin: 0 !important;
+          padding: 0 !important;
+          display: inline-flex !important;
+          align-items: center !important;
+        }
+        .social-icons a {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .fa-fw {
+          text-align: center !important;
         }
       </style>
       {% if author.location %}
