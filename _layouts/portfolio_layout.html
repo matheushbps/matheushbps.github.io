@@ -358,6 +358,11 @@ layout: none
             display: block;
         }
 
+        /* Remove any potential header signs */
+        .masthead li.has-children > a:after {
+            content: none !important;
+        }
+
         /* Responsive adjustments */
         @media screen and (max-width: 1200px) {
             .content-wrapper {
