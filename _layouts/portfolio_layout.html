@@ -84,29 +84,33 @@ layout: none
         /* Main Content Wrapper */
         .content-wrapper {
             margin-left: 300px;
-            margin-right: 520px; /* Add right margin to prevent content from going under TOC */
-            padding: 20px;
-            width: auto; /* Let the margins control the width */
+            padding: 20px 20px 20px 20px; /* Reduced top padding */
+            width: calc(100% - 300px);
             position: relative;
             min-height: calc(100vh - 70px);
-            margin-top: 70px;
+            margin-top: 70px; /* Add this to account for fixed header */
         }
 
         /* Table of Contents (TOC) Styling */
         .toc {
-            position: fixed !important;
-            top: 70px !important;
-            right: 20px !important;
-            width: 500px !important;
-            max-height: calc(100vh - 90px) !important;
-            overflow-y: auto !important;
-            z-index: 999 !important;
-            background-color: #f1f1f1 !important;
-            padding: 30px !important;
-            border-radius: 5px !important;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-            font-size: 30px !important;
+            font-size: 30px !important;     /* Slightly reduced font size */
+            font-weight: bold;
+            position: fixed !important;          /* Changed from sticky to fixed */
+            top: 70px !important; /* Align with content, just below header */
+            right: 20px !important;             /* Position it on the right */
+            width: 500px !important;            /* Increased width for better readability */
+            padding: 30px;           /* Increased padding */
             text-align: left !important;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;               /* Enable scrolling */
+            max-height: calc(100vh - 90px); /* Prevent overflow */
+            z-index: 999 !important; /* Ensure it stays above content but below header */
+            /* Add these properties to ensure it stays fixed */
+            bottom: auto !important;
+            transform: none !important;
+            will-change: initial !important;
         }
 
         /* Increase TOC font sizes */
