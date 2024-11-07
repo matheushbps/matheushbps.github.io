@@ -276,18 +276,25 @@ layout: none
 
         @media screen and (max-width: 768px) {
             .sidebar {
-                width: 200px;
+                width: 0;
+                display: none;
+                visibility: hidden;
             }
 
             .content-wrapper {
-                margin-left: 200px;
-                width: calc(100% - 200px);
+                margin-left: 0;
+                width: 100%;
+                padding: 70px 10px 10px 10px;
             }
 
-            .toc {
-                display: none; /* Hide TOC on small screens */
+            /* Ensure header stays visible */
+            .masthead {
+                position: fixed;
+                width: 100%;
+                z-index: 1000;
             }
         }
+
         /* Update the media query for small screens */
         @media screen and (max-width: 768px) {
             .sidebar {
