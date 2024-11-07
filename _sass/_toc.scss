@@ -41,6 +41,10 @@
         ~ .page__content {
             margin-right: 0 !important;
         }
+
+        + .toc-show-button {
+            display: block !important;
+        }
     }
 
     .nav__title {
@@ -52,7 +56,29 @@
         transition: margin-right 0.3s ease-in-out !important;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none !important;
+        
+        ~ .page__content {
+            margin-right: 0 !important;
+        }
+    }
+}
+
+.toc-show-button {
+    display: none !important;
+    position: fixed !important;
+    right: 20px !important;
+    top: 80px !important;
+    background: rgba(235, 245, 255, 0.9) !important;
+    border: none !important;
+    border-left: 3px solid #89CFF0 !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    z-index: 99 !important;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1) !important;
+    
+    &:hover {
+        opacity: 0.8 !important;
     }
 }

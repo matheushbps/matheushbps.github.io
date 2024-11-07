@@ -12,19 +12,35 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.style.transition = 'transform 0.3s';
         toc.insertBefore(toggleButton, toc.firstChild);
 
-        // Add click handler with content adjustment
-        toggleButton.addEventListener('click', function() {
-            const isHidden = toc.classList.contains('is-hidden');
-            toc.classList.toggle('is-hidden');
+        // Create show button
+        const showButton = document.createElement('button');
+        showButton.className = 'toc-show-button';
+        showButton.innerHTML = '☰ Show TOC';
+        document.body.appendChild(showButton);
+
+        // Toggle function
+        function toggleTOC(show) {
+            const isHidden = show === undefined ? toc.classList.contains('is-hidden') : !show;
+            toc.classList.toggle('is-hidden', !isHidden);
             if (mainContent) {
                 mainContent.style.marginRight = isHidden ? '270px' : '0';
             }
-            toggleButton.setAttribute('aria-expanded', !isHidden);
-            this.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
-        });
+            toggleButton.setAttribute('aria-expanded', isHidden);
+            toggleButton.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        // Add click handlers
+        toggleButton.addEventListener('click', () => toggleTOC());
+        showButton.addEventListener('click', () => toggleTOC(true));
 
         // Add keyboard support
         toggleButton.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                this.click();
+            }
+        });
+
+        showButton.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 this.click();
             }
