@@ -16,6 +16,14 @@ COPY Gemfile ./
 # Install bundler and dependencies
 RUN gem install bundler:2.3.26 && bundle install
 
+# Copy static files
+COPY assets/ ./assets/
+COPY images/ ./images/
+COPY _sass/ ./_sass/
+COPY _layouts/ ./_layouts/
+COPY _includes/ ./_includes/
+COPY _config.yml ./
+
 # Expose port 4000 for Jekyll server
 EXPOSE 4000
 
